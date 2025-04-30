@@ -2,13 +2,13 @@
 import { config } from "@/config";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import Providers from "@/components/theme-provider";
 
-const fontSans = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const fontSans = Manrope({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: {
@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans ",
+          "min-h-screen bg-background font-sans",
           fontSans.variable
         )}
       >

@@ -1,10 +1,10 @@
+import Hero from "@/components/landing/Hero";
+
 const Page = async () => {
   return (
-    <div className="container mx-auto px-5 mb-10">
+    <div className="min-h-screen">
       <div>
-        <h1>
-          yo
-        </h1>
+      <Hero/>
       </div>
 
     </div>

@@ -33,36 +33,15 @@ const config = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
+
+        // background: "#FFF4EC",
+        // background: "#eeeee4",
+        background: "#f8f8f8",
+        // background: "#ede7e1",
         foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+
+        primary:"#a3d43f"
+
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -88,11 +67,21 @@ const config = {
       },
 
       fontSize: {
-        '7xl': '5rem',
-        '8xl': '6rem',
-        '9xl': '7rem',
-        '10xl': '8rem',
+        // Body
+        'body-regular-14': ['14px', '19px'], // regular 14
+        'body-bold-14': ['14px', '19px'],    // bold 14
+        'body-regular-13': ['13px', '19px'], // regular 13
+
+        // Titles
+        'card-title-24': ['24px', '33px'],   // 24pt card title
+        'inner-card-title-18': ['18px', '24px'], // inner 18pt title
+        'card-title-30': ['30px', '36px'],   // 30px extrabold
+
+        // Other
+        'medium-16': ['16px', '24px'],       // 16px medium
+        'bold-22': ['22px', '30px'],         // 22px bold
       },
+
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
