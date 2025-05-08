@@ -1,113 +1,61 @@
-// // import {config} from "@/config";
-// // import Image from "next/image";
-// // import React, {useState, useEffect, useRef} from "react";
-
-// import {ChevronRight} from "lucide-react";
-
-
-
-// // interface HeroProps {
-// //     text?: string
-// //     secText?: string;
-
-// // }
-// // const Hero = ({text, secText}: HeroProps) => {
-
-
-
-// //     return (
-// //         <div className="relative h-[95vh] w-full overflow-hidden z-0">
-            
-// //             <Image
-// //                 className="absolute top-0 left-0 h-full w-full object-cover"
-// //                 src="/images/doctor.jpg"
-// //                 alt="ISSAC18"
-// //                 width={1920}
-// //                 height={1080}
-
-// //             />
-
-// //             {/* Overlay Content */}
-// //             <div className="absolute top-0 left-0 z-10 flex h-full w-full flex-col justify-center items-start pb-20 bg-black bg-opacity-50 text-white text-center px-6">
-// //                 <div className="flex flex-col items-start px-6 md:px-16">
-
-// //                     <h1 className="text-5xl text-left sm:text-5xl lg:text-6xl font-bold mb-4">
-// //                         {config.name.name}
-// //                     </h1>
-// //                     <p className="font-serif text-left text-xl mb-6 max-w-4xl">
-// //                         ISAACC18 is a dedicated international group of volunteer anesthesiologists and critical care physicians committed to supporting the Israeli Anesthesia and Critical Care community with clinical staffing, education, and collaborative academic partnerships that foster excellence in medical care in Israel and around the world.
-// //                     </p>
-// //                 </div>
-// //             </div>
-// //         </div>
-// //     );
-// // };
-
-// // export default Hero;
-
-
-
-// export default function Hero() {
+// import {config} from "@/config";
+// import Image from "next/image";
+// import HeaderText from "../ui/HeaderText";
+// export default function Example() {
 //     return (
-//         <div className="relative isolate overflow-hidden bg-white">
-//             <svg
-//                 aria-hidden="true"
-//                 className="absolute inset-0 -z-10 size-full [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-gray-200"
-//             >
-//                 <defs>
-//                     <pattern
-//                         x="50%"
-//                         y={-1}
-//                         id="0787a7c5-978c-4f66-83c7-11c213f99cb7"
-//                         width={200}
-//                         height={200}
-//                         patternUnits="userSpaceOnUse"
-//                     >
-//                         <path d="M.5 200V.5H200" fill="none" />
-//                     </pattern>
-//                 </defs>
-//                 <rect fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)" width="100%" height="100%" strokeWidth={0} />
-//             </svg>
-//             <div className="mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:px-8 lg:justify-between lg:py-40">
-//                 <div className="mx-auto max-w-2xl lg:mx-0 lg:shrink-0 lg:pt-8">
-//                     <img
-//                         alt="Your Company"
-//                         src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-//                         className="h-11"
-//                     />
- 
-//                     <h1 className="mt-10 text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-7xl">
-//                         Deploy to the cloud with confidence
-//                     </h1>
+//         <div className="pt-40 overflow-hidden">
+
+
+//             <div className="mx-auto w-5/6 px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:px-8 lg:py-40">
+//                 <div className="mx-auto max-w-2xl shrink-0 lg:mx-0 lg:pt-8">
+
+//                     <HeaderText as="h1" variant="large" className="mt-10 text-stone-700 font-semibold">
+//                         {config.name.name}
+//                     </HeaderText>
 //                     <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
 //                         Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
 //                         fugiat veniam occaecat.
 //                     </p>
-//                     <div className="mt-10 flex items-center gap-x-6">
+//                     {/* <div className="mt-10 flex items-center gap-x-6">
 //                         <a
 //                             href="#"
-//                             className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+//                             className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
 //                         >
 //                             Get started
 //                         </a>
-//                         <a href="#" className="text-sm/6 font-semibold text-gray-900">
+//                         <a href="#" className="text-sm/6 font-semibold text-white">
 //                             Learn more <span aria-hidden="true">→</span>
 //                         </a>
-//                     </div>
+//                     </div> */}
 //                 </div>
-//                 <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:mt-0 lg:mr-0 lg:ml-10 lg:max-w-none lg:flex-none xl:ml-32">
-//                     <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-//                         <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-gray-900/10 ring-inset lg:-m-4 lg:rounded-2xl lg:p-4">
-//                             <img
+
+//                 <div className="relative mx-auto mt-16 flex w-full max-w-3xl sm:mt-24 lg:mt-0 lg:mr-0 lg:ml-10 lg:max-w-none lg:flex-none xl:ml-32">
+//                     <div className="w-full lg:w-[76rem] flex-none">
+//                         <div className="relative">
+//                             <Image
 //                                 alt="App screenshot"
-//                                 src="https://tailwindcss.com/plus-assets/img/component-images/project-app-screenshot.png"
+//                                 src={'/images/doctor.jpg'}
 //                                 width={2432}
 //                                 height={1442}
-//                                 className="w-[76rem] rounded-md shadow-2xl ring-1 ring-gray-900/10"
+//                                 className="w-full rounded-3xl bg-white/5 shadow-2xl ring-1 ring-white/10 object-cover"
 //                             />
+//                             <div className="absolute inset-0 rounded-3xl bg-black opacity-50 " />
 //                         </div>
 //                     </div>
 //                 </div>
+
+//                 {/* <div className="relative mx-auto mt-16 flex max-w-5xl sm:mt-24 lg:mt-0 lg:mr-0 lg:ml-10 lg:max-w-none lg:flex-none xl:ml-32">
+//                     <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
+//                         <Image
+//                             alt="App screenshot"
+//                             src={'/images/doctor.jpg'}
+//                             width={2432}
+//                             height={1442}
+//                             className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+//                         />
+//                         <div className="absolute inset-0 bg-black opacity-50 rounded-md"></div>
+//                     </div>
+//                 </div> */}
 //             </div>
 //         </div>
 //     )
@@ -115,78 +63,149 @@
 
 
 
-'use client'
 
-import {config} from '@/config'
-import {MoreHorizontal} from 'lucide-react'
-import Image from 'next/image'
-import {useState} from 'react'
-// import {Dialog, DialogPanel} from '@headlessui/react'
-// import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
+// import Image from 'next/image';
+// import React from 'react';
 
-const navigation = [
-    {name: 'Product', href: '#'},
-    {name: 'Features', href: '#'},
-    {name: 'Marketplace', href: '#'},
-    {name: 'Company', href: '#'},
-]
+// interface HeroSectionProps {
+//     imageUrl?: string;
+//     imageAlt?: string;
+//     headline?: string;
+//     highlight?: string;
+//     subcopy?: string;
+//     ctaLabel?: string;
+//     onCtaClick?: () => void;
+// }
 
-export default function Example() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+// const HeroSection: React.FC<HeroSectionProps> = ({
+//     imageUrl,
+//     imageAlt = 'Smiling person',
+//     headline = 'Teeth Whitening:',
+//     highlight = 'Brighter',
+//     subcopy = 'Serving Central Texas for over 50 years, we put patients’ needs first, providing superior care in a safe and compassionate environment.',
+//     ctaLabel = 'Schedule an Appointment →',
+//     onCtaClick,
+// }) => {
+//     return (
+//         <section className="bg-amber-50 py-44">
+//             <div className="container mx-auto px-4">
+//                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-    return (
+//                     {/* 1) Full-width headline */}
+//                     <div className="col-span-1 lg:col-span-2 text-center max-w-2xl mx-auto">
+//                         <h1 className="text-4xl md:text-5xl font-semibold leading-tight text-gray-900">
+//                             {headline}
+//                             <br />
+//                             <span>Brighter Days Start with a </span>
+//                             <span className="text-amber-500">{highlight}</span>
+//                             <span> Smile</span>
+//                         </h1>
+//                     </div>
+
+//                     {/* 2) Image bottom-left */}
+//                     <div className='w-full flex flex-col items-center lg:items-start justify-center space-y-6 sm:flex-row lg:space-x-6 lg:space-y-0 sm:justify-between'>
+//                         <div className="w-full bg-slate-200">
+//                             <Image
+//                                 width={500}
+//                                 height={500}
+//                                 src="/images/smiling-woman.png"
+//                                 alt={imageAlt}
+//                                 className="w-full rounded-lg object-cover"
+//                             />
+//                         </div>
+
+//                         {/* 3) Subcopy + CTA bottom-right */}
+//                         <div className="flex flex-col items-start lg:items-end justify-center space-y-6">
+//                             <p className="text-gray-700 max-w-md text-left lg:text-right">
+//                                 {subcopy}
+//                             </p>
+//                             <button
+//                                 type="button"
+//                                 onClick={onCtaClick}
+//                                 className="bg-teal-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-teal-700 transition"
+//                             >
+//                                 {ctaLabel}
+//                             </button>
+//                         </div>
+//                     </div>
+
+
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// };
+
+// export default HeroSection;
+
+
+
+import Image from 'next/image';
+import React from 'react';
+import BodyText from '../ui/BodyText';
+
+interface HeroSectionProps {
+    imageUrl?: string;
+    imageAlt?: string;
+    headline?: string;
+    highlight?: string;
+    subcopy?: string;
+    ctaLabel?: string;
+    onCtaClick?: () => void;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({
+    imageUrl = '/images/smiling-woman.png',
+    imageAlt = 'Smiling person',
+    highlight = 'New',
+    subcopy = 'Serving Central Texas for over 50 years, we put patients’ needs first, providing superior care in a safe and compassionate environment.',
+    ctaLabel = 'Schedule an Appointment →',
+    onCtaClick,
+}) => (
+    <section className="pt-40 h-fit">
+        {/* Decorative circle behind image */}
+
         <div className="">
- 
-            <div className="relative isolate pt-14">
-                <div
-                    aria-hidden="true"
-                    className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-                >
-                    <div
-                        style={{
-                            clipPath:
-                                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-                        }}
-                        className="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+            {/* Headline */}
+            <div className="text-center max-w-3xl mx-auto ">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl  font-bold text-gray-900 leading-loose">
+                    Facial Surgery Center
+                    <br />
+                    <span className="font-light">Transform Your Confidence with a </span>
+                    <span className="text-amber-600">{highlight}</span>
+                    <span className="font-light"> Smile</span>
+                </h1>
+            </div>
+
+            <div className="flex sm:flex-row items-center px-12 justify-between h-full ">
+
+                <div className='flex-[0.6]'>
+
+                    <Image
+                        src={imageUrl}
+                        alt={imageAlt}
+                        width={500}
+                        height={500}
+                        className="object-contain w-full h-full"
                     />
                 </div>
-                <div className="py-24 sm:py-32 lg:pb-40">
-                    <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                        <div className="mx-auto max-w-2xl text-center">
-                            <h1 className="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">
-                                {config.name.name}
-                            </h1>
-                            <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
-                                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-                                fugiat veniam occaecat.
-                            </p>
-                        </div>
-                        <div className="mt-16 flow-root sm:mt-24">
-                            <div className="-m-2 rounded-xl bg-primary/5 p-2 ring-1 ring-primary/10 ring-inset lg:-m-4 lg:rounded-2xl lg:p-4">
-                                <Image
-                                    alt="App screenshot"
-                                    src={'/images/doctor.jpg'}
-                                    width={2432}
-                                    height={1442}
-                                    className="rounded-md shadow-2xl ring-1 ring-primary/10"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    aria-hidden="true"
-                    className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-                >
-                    <div
-                        style={{
-                            clipPath:
-                                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-                        }}
-                        className="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-                    />
+
+                {/* Copy + CTA */}
+                <div className="flex flex-col items-center md:items-start space-y-6 ">
+                    <BodyText className="text-gray-700 max-w-md text-center md:text-left">
+                        {subcopy}
+                    </BodyText>
+                    <button
+                        type="button"
+                        onClick={onCtaClick}
+                        className="bg-teal-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-teal-700 transition"
+                    >
+                        {ctaLabel}
+                    </button>
                 </div>
             </div>
         </div>
-    )
-}
+    </section>
+);
+
+export default HeroSection;

@@ -6,7 +6,6 @@ import {
   SheetHeader,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { config } from "@/config";
 import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
 import Image from "next/image";
@@ -96,26 +95,29 @@ export const Header: FunctionComponent = () => {
     // <section className="fixed top-0 left-0 w-full flex items-center justify-between px-8 py-4 z-50 transition-all">
     <section
       className={cn(
-        "fixed top-0 left-0 w-full flex items-center justify-between px-8 py-4 z-50 transition-all",
-        scrolled ? "backdrop-blur-md bg-white/70 shadow-sm" : "bg-transparent"
+        "fixed top-0 left-0 w-full flex items-center justify-between px-8 z-50 transition-all",
+        scrolled ? "backdrop-blur-md bg-background/70 shadow-sm" : "bg-transparent"
       )}
     >
       <Link href="/">
 
         <Image
-          src="/images/logo.png"
+          src="/images/Group.svg"
           alt="Logo"
           width={100}
           height={100}
-          className="w-16 h-16 md:w-32 md:h-32 rounded-full"
+          className="w-16 h-16 md:w-32 md:h-32 py-0"
           priority
         
         />
       </Link>
       <Navigation />
 
-      <div>
-        Schedule Today 
+      <div className="hidden md:flex items-center justify-center bg-primaryBlue text-white px-6 py-4 rounded-3xl hover:bg-primary/80 transition-all">
+      <p className="text-lg font-semibold">
+          Schedule Today 
+
+      </p>
       </div>
     </section>
   );

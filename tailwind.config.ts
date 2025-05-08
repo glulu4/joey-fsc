@@ -34,13 +34,34 @@ const config = {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
 
-        // background: "#FFF4EC",
-        // background: "#eeeee4",
-        background: "#f8f8f8",
+
+        // background: "#f8f8f8",
+        
         // background: "#ede7e1",
+        background: "#fffbeb",
         foreground: "hsl(var(--foreground))",
 
-        primary:"#a3d43f"
+        primaryBlue: '#0087FF',
+        primaryYellow: '#FFBA01',
+        primaryGreen: '#00CE00',
+
+        // Secondary Blues
+        mediumBlue: '#42A7FF',
+        lightBlue: '#88D9FF',
+        lightestBlue: '#c8ecfc',
+
+        // Secondary Yellows
+        mediumYellow: '#FFE142',
+        lightYellow: '#FFEC89',
+        lighterYellow: '#FFFFC7A',
+
+        // Secondary Greens
+        mediumGreen: '#7AD926',
+        lightGreen: '#9FEB54',
+        lighterGreen: '#DBFFB5',
+
+
+        lightPurple: "#d9c2ff",
 
       },
       borderRadius: {
@@ -80,6 +101,8 @@ const config = {
         // Other
         'medium-16': ['16px', '24px'],       // 16px medium
         'bold-22': ['22px', '30px'],         // 22px bold
+
+        "section-title": ['48px', '40px'], // 32px section title
       },
 
     },
