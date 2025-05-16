@@ -36,7 +36,14 @@ interface MenuItem {
 
 const menuItems: MenuItem[] = [
   {name: "Home", href: "/"},
-  {name: "For Patients", href: "/about"},
+  {name: "For Patients", href: "/about",
+    subItems:[
+      {name: "What to Expect", href: "/"},
+      {name: "Pre Op", href: "/"},
+      {name: "Post Op", href: "/"},
+
+    ]
+  },
   {name: "Services", 
     href: "/about",
     subItems: [
@@ -57,13 +64,14 @@ const menuItems: MenuItem[] = [
 
     ],
   },
+
   {
     name: "About",
     href: "/about",
     subItems: [
-      {name: "Our Team", href: "/about/team"},
-      {name: "Mission", href: "/about/mission"},
-      {name: "History", href: "/about/history"},
+      {name: "Meet the Doctors", href: "/about/team"},
+      {name: "Meet the Team", href: "/about/mission"},
+      {name: "About FSC", href: "/about/history"},
     ],
   },
   {name: "Contact", href: "/Contact"},
