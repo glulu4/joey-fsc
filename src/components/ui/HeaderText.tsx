@@ -14,8 +14,8 @@ export default function HeaderText({
     as: Tag = 'h2' // default to <h2>
 }: HeaderTextProps) {
     const variants = {
-        small: "text-2xl font-extrabold tracking-tight sm:text-3xl",
-        default: "text-4xl font-extrabold tracking-tight sm:text-5xl",
+        small: "text-2xl tracking-tight sm:text-3xl",
+        default: "text-4xl tracking-tight sm:text-5xl",
         large: "text-5xl tracking-tight sm:text-6xl lg:text-7xl"
     }
 

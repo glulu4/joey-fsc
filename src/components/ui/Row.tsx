@@ -1,60 +1,62 @@
-// "use client"
-// // import React from 'react'
+// "use client";
 
-// import {ChevronRightIcon, Sparkles, Users} from "lucide-react";
 // import Image from "next/image";
+// import {DotLottieReact} from '@lottiefiles/dotlottie-react';
+// import HeaderText from "./HeaderText";
+// import BodyText from "./BodyText";
 
 // interface RowProps {
 //     title: string;
 //     description: string;
-//     imageSrc: string;   
+//     imageSrc: string;
+//     reverse?: boolean;
+//     isImgLottie?: boolean;
+//     className?: string;
+
 // }
 
-// export default function Row({
-
-//     title,
-//     description,
-//     imageSrc
-// }: RowProps) {
+// export default function Row({title, description, imageSrc, reverse = false, isImgLottie = false, className}: RowProps) {
 //     return (
-
-
-//         <div className="mt-16 grid grid-cols-1 py-8 md:py-12 gap-12 lg:grid-cols-2 lg:items-center pt-9 sm:space-x-24 space-y-14 mx-auto">
-
-//             <div className=" mx-10 sm:mx-0 max-w-xl lg:mx-0 lg:shrink-0 lg:pt-8 text-center sm:text-left">
-
-//                 <div>
-
-//                     <p className="mt-10 font-semibold  leading-none text-5xl  text-blue-950 sm:text-7xl">
-//                         {title}
-//                     </p>
-//                 </div>
-
-//                 <p className="mt-8 text-xl font-medium text-pretty text-gray-600 sm:text-2xl/8">
+//         <div
+//             className={`${className} flex flex-col-reverse ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} items-center justify-between w-full`}
+//         >
+//             <div className="flex-[0.6] max-w-xl justify-start text-left  ">
+//                 <HeaderText className="mt-10 font-semibold text-gray-950">
+//                     {title}
+//                 </HeaderText>
+//                 <BodyText className="mt-10 font-medium text-gray-600">
 //                     {description}
-//                 </p>
-
+//                 </BodyText>
 //             </div>
-//             <div className="flex justify-center-center lg:text-left">
-//                 <Image
+
+//             <div className="flex justify-center flex-[0.4]">
+//                 {isImgLottie ? (
+
+//                     <DotLottieReact
+//                         src={imageSrc}
+//                         loop
+//                         autoplay
+//                     />
+//                 ) : <Image
 //                     src={imageSrc}
-//                     alt="Paragon Exterior Team"
-//                     width={800}
-//                     height={800}
-//                     className="object-cover"
-//                 />
+//                     alt={title}
+//                     width={500}
+//                     height={500}
+//                     className="object-fill "
+//                 />}
+
 //             </div>
-
 //         </div>
-//     )
+//     );
 // }
-
 
 
 "use client";
 
 import Image from "next/image";
-import {DotLottieReact} from '@lottiefiles/dotlottie-react';
+import {DotLottieReact} from "@lottiefiles/dotlottie-react";
+import HeaderText from "./HeaderText";
+import BodyText from "./BodyText";
 
 interface RowProps {
     title: string;
@@ -62,55 +64,50 @@ interface RowProps {
     imageSrc: string;
     reverse?: boolean;
     isImgLottie?: boolean;
+    className?: string;
+    /** Tailwind color class for the header text */
+    headerColor?: string;
+    /** Tailwind color class for the body text */
+    bodyColor?: string;
 }
 
-export default function Row({title, description, imageSrc, reverse = false, isImgLottie = false}: RowProps) {
+export default function Row({
+    title,
+    description,
+    imageSrc,
+    reverse = false,
+    isImgLottie = false,
+    className = "",
+    headerColor = "text-gray-950",
+    bodyColor = "text-gray-600",
+}: RowProps) {
     return (
         <div
-            className={`mt-16 py-8 md:py-12 space-y-14 lg:space-y-0 lg:py-24 mx-auto flex flex-col-reverse ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"
-                } items-center gap-12`}
+            className={`${className} flex flex-col-reverse ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"
+                } items-center justify-between w-full`}
         >
-            <div className="mx-10  max-w-4xl text-center sm:text-left lg:text-left bg-slate-300">
-                <p className="mt-10 font-semibold leading-none text-5xl text-blue-950 sm:text-7xl">
+            <div className="flex-[0.6] max-w-xl justify-start text-left">
+                <HeaderText className={`mt-10 font-semibold ${headerColor}`}>
                     {title}
-                </p>
-                <p className="mt-8 text-xl font-medium text-pretty text-gray-600 sm:text-2xl/8">
+                </HeaderText>
+                <BodyText className={`mt-10 font-medium ${bodyColor}`}>
                     {description}
-                </p>
+                </BodyText>
             </div>
 
-            <div className="flex justify-center">
+            <div className="flex justify-center flex-[0.4]">
                 {isImgLottie ? (
-                    // <DotLottieReact
-                    //     src={imageSrc}
-                    //     loop
-                    //     autoplay
-                    //     className="w-full max-w-[800px] h-auto object-cover rounded-md shadow-lg"
-                    // />
-                    <DotLottieReact
+                    <DotLottieReact src={imageSrc} loop autoplay />
+                ) : (
+                    <Image
                         src={imageSrc}
-                        loop
-                        autoplay
+                        alt={title}
+                        width={500}
+                        height={500}
+                        className="object-fill"
                     />
-                ) : <Image
-                    src={imageSrc}
-                    alt={title}
-                    width={800}
-                    height={800}
-                    className="object-cover rounded-md shadow-lg"
-                />}
-                {/* <Image
-                    src={imageSrc}
-                    alt={title}
-                    width={800}
-                    height={800}
-                    className="object-cover rounded-md shadow-lg"
-                /> */}
-
-
+                )}
             </div>
         </div>
     );
 }
-
-

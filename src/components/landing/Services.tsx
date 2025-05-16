@@ -2,7 +2,7 @@
 import {Brain, Eye, Heart, Ear, Smile, Stethoscope, Syringe, ScanEye, LampCeilingIcon} from "lucide-react"
 
 const services = [
-    {name: "Neurology", icon: Brain},
+    {name: "Sleep Apnea", img: "/images/services/sleep-apnea.png",},
     {name: "Ophthalmology", icon: Eye},
     {name: "Cardiology", icon: Heart},
     {name: "Pulmonology", icon: LampCeilingIcon},
@@ -22,9 +22,19 @@ export default function ServicesGrid() {
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className="flex flex-col items-center justify-center border rounded-xl p-6 hover:shadow-md hover:bg-lightPurple transition"
+                            className="flex flex-col items-center justify-center border bg-white rounded-xl p-6 hover:shadow-md  transition"
                         >
-                            <service.icon className="w-10 h-10 text-primaryBlue mb-4" />
+                            {service.img ? (
+                                <img
+                                    src={service.img}
+                                    alt={service.name}
+                                    className="w-10 h-10 mb-4"
+                                />
+                            ) : (
+                                    service.icon && <service.icon className="w-10 h-10 text-primaryBlue mb-4" />
+                            )}
+                            <img src={service.img} alt={service.name} className="w-10 h-10 mb-4" />
+                            {/* <service.icon className="w-10 h-10 text-primaryBlue mb-4" /> */}
                             <span className="text-sm font-medium text-gray-700">{service.name}</span>
                         </div>
                     ))}

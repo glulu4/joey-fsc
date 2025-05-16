@@ -4,28 +4,89 @@ import {ChevronLeft, ChevronRight} from "lucide-react";
 import HeaderText from "./ui/HeaderText";
 import BodyText from "./ui/BodyText";
 import Image from "next/image";
+import {isMobile} from 'react-device-detect';
 
 export const SAMPLE_DATA = [
     
-    {id: "01", 
-        color: "bg-lightPurple",
+{
+    
+    name: "Anesthesia",
+    img: "/images/services/anesthesia.png",
+},
+
+
+    {
+    name: "Bone Grafting",
+    img: "/images/services/bone-graft.png",
+    },
+    {
+    name: "Botox",
+    img: "/images/services/botox.png",
+    },
+    {
+    name: "Facial Trauma",
+    img: "/images/services/facial-trauma.png",
+    },
+    {
+    name: "Genioplasty / Chin Surgery",
+    img: "/images/services/genioplasty.png",
 
     },
-    {id: "02", color: "bg-lightYellow"},
-    {id: "03", color: "bg-lightBlue"},
-    // {id: "04", color: "#017186"},
-    // {id: "05", color: "#1a7f92"},
-    // {id: "06", color: "#348d9e"},
-    // {id: "07", color: "#4d9caa"},
-    // {id: "08", color: "#67aab6"},
-    // {id: "09", color: "#80b8c3"},
+    {
+        name: "Dental Implants",
+        img: "/images/services/implants.png",
+    },
+    {
+        name: "Oral Pathology",
+        img: "/images/services/oral-pathology.png",
+    },
+    {
+        name: "Orthognathic Surgery",
+        img: "/images/services/orthognathic.png",
+    },
+    {
+        name: "Sleep Apnea",
+    img: "/images/services/sleep-apnea.png",
+    },
+    {
+    name: "TMJ",
+    img: "/images/services/tmj.png",
+   
+    },
+    {
+        name: "Tooth Extractions",
+        img: "/images/services/tooth-extract.png",
+        
+    },
+    {
+        name: "Wisdom Teeth",
+        img: "/images/services/wisdom-tooth.png",
+    },
+
+
+
 ];
 
-const ITEM_WIDTH = window.innerWidth * 0.6
+
 //1500;
 
 export default function HorizontalSlider() {
     const containerRef = useRef<HTMLDivElement>(null);
+
+    const [itemWidth, setItemWidth] = React.useState(() => {
+
+        if (isMobile){
+            return window.innerWidth * 0.8;
+        }
+        else{
+            return window.innerWidth * 0.4;
+        }
+        
+    });
+
+
+
+
 
     const handleScroll = (scrollAmount: number) => {
         if (containerRef.current) {
@@ -36,39 +97,59 @@ export default function HorizontalSlider() {
     return (
         <div className="flex flex-col items-center w-full px-4">
 
-            <HeaderText className="text-left self-start text-stone-700 mb-6 px-6">
-                Services We Offer
-            </HeaderText>
+            <div className="flex flex-row items-center justify-between w-full ">
+                <HeaderText className=" text-gray-950 px-6">
+                    Services We Offer
+                </HeaderText>
+                <div className="flex items-center gap-4">
+                    <button
+                        onClick={() => handleScroll(-itemWidth)}
+                        className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-orange-700/75 flex items-center justify-center shadow-sm"
+                    >
+                        <ChevronLeft className="w-6 h-6 text-white" />
+                    </button>
+
+                    <button
+                        onClick={() => handleScroll(itemWidth)}
+                        className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-orange-700/75 flex items-center justify-center shadow-sm"
+                    >
+                        <ChevronRight className="w-6 h-6 text-white" />
+                    </button>
+                </div>
+            </div>
+
 
             <div
                 ref={containerRef}
                 className="w-full overflow-x-auto scroll-smooth snap-x snap-mandatory flex gap-6 py-6"
             >
-                {SAMPLE_DATA.map((item) => (
+                {SAMPLE_DATA.map((item, idx) => (
                     <div
-                        key={item.id}
-                        className={`${item.color} snap-center shrink-0 rounded-3xl shadow-md flex flex-col items-center justify-center text-center p-6`}
+                        key={idx}
+                        className={` bg-background snap-center shrink-0 rounded-3xl shadow-md flex flex-col items-center justify-around text-center p-6`}
                         style={{
-                            minWidth: `${ITEM_WIDTH}px`,
-                            height: window.innerHeight * 0.6,//"400px",
+                            width: `${itemWidth}px`,
+                            height: window.innerHeight * 0.8,//"400px",
                         }}
                     >
-                        <div className="self-start text-left w-1/2">
-                            <BodyText variant="large" >
-                                Item {item.id}
+                        <div className="self-start text-left w-3/4 space-y-6">
+                            <HeaderText variant="small" className="text-gray-950 font-semibold" >
+                               {item.name}
+                            </HeaderText>          
+                            <BodyText className="text-gray-600 ">
+                                Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </BodyText>
-                            <BodyText variant="small">
-                                This card is fixed at 1000px wide but still swipes beautifully on
-                                mobile.
-                            </BodyText>
+
                         </div>
-                        <div className="self-end">
+                        <div className="self-center">
                             <Image
                             width={200}
                             height={200}
                             alt="App screenshot"
-                            src={'/icons/face.svg'}
-                            className="w-full h-fullobject-cover"
+                            src={item.img}
+                            className="w-full h-full object-cover"
+                            priority
                             />
                         </div>
 
@@ -76,21 +157,7 @@ export default function HorizontalSlider() {
                 ))}
             </div>
 
-            <div className="flex self-end items-center gap-4 mt-4">
-                <button
-                    onClick={() => handleScroll(-ITEM_WIDTH)}
-                    className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-orange-700/75 flex items-center justify-center shadow-sm"
-                >
-                    <ChevronLeft className="w-6 h-6 text-white" />
-                </button>
 
-                <button
-                    onClick={() => handleScroll(ITEM_WIDTH)}
-                    className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-orange-700/75 flex items-center justify-center shadow-sm"
-                >
-                    <ChevronRight className="w-6 h-6 text-white" />
-                </button>
-            </div>
         </div>
     );
 }

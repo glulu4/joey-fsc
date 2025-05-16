@@ -18,13 +18,13 @@ export default function BodyText({
     as: Tag = 'h2' // default to <h2>
 }: BodyTextProps) {
     const variants = {
-        small: "text-sm font-medium text-pretty sm:text-base",
-        default: "text-lg font-medium text-pretty sm:text-xl/8",//"text-4xl font-extrabold tracking-tight sm:text-5xl",
-        large: "text-2xl font-extrabold tracking-tight sm:text-3xl"
+        small: "text-sm sm:text-base",
+        default: "text-lg sm:text-xl/8",//"text-4xl font-extrabold tracking-tight sm:text-5xl",
+        large: "text-2xl sm:text-3xl"
     }
 
     return (
-        <Tag className={`${variants[variant]} ${className} text-pretty`}>
+        <Tag className={`${variants[variant]} ${className} text-prettymtracking-tight`}>
             {children}
         </Tag>
     );

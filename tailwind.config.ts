@@ -34,34 +34,41 @@ const config = {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
 
+        // background: "#fffbeb",
+        background:"#fff9f4",
+        bg2:"#fbe8d9",
+        bg3:"#fbe8d9",
 
-        // background: "#f8f8f8",
-        
-        // background: "#ede7e1",
-        background: "#fffbeb",
         foreground: "hsl(var(--foreground))",
-
-        primaryBlue: '#0087FF',
+        // primaryBlue: '#0087FF',
         primaryYellow: '#FFBA01',
-        primaryGreen: '#00CE00',
+        primaryOrange: '#F27249',
+
+        primaryPurple: '#330072',
+        primaryPink:'#FEB7B1',
+        // primaryGreen: '#00CE00',
+
+        primaryCyan: '#69d1e3',
+        "primary-teal": "#005D64"
+        
 
         // Secondary Blues
-        mediumBlue: '#42A7FF',
-        lightBlue: '#88D9FF',
-        lightestBlue: '#c8ecfc',
+        // mediumBlue: '#42A7FF',
+        // lightBlue: '#88D9FF',
+        // lightestBlue: '#c8ecfc',
 
-        // Secondary Yellows
-        mediumYellow: '#FFE142',
-        lightYellow: '#FFEC89',
-        lighterYellow: '#FFFFC7A',
+        // // Secondary Yellows
+        // mediumYellow: '#FFE142',
+        // lightYellow: '#FFEC89',
+        // lighterYellow: '#FFFFC7A',
 
-        // Secondary Greens
-        mediumGreen: '#7AD926',
-        lightGreen: '#9FEB54',
-        lighterGreen: '#DBFFB5',
+        // // Secondary Greens
+        // mediumGreen: '#7AD926',
+        // lightGreen: '#9FEB54',
+        // lighterGreen: '#DBFFB5',
 
 
-        lightPurple: "#d9c2ff",
+        // lightPurple: "#d9c2ff",
 
       },
       borderRadius: {

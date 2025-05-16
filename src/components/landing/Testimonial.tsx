@@ -1,4 +1,5 @@
 import clsx from "clsx"
+import HeaderText from "../ui/HeaderText"
 
 const featuredTestimonial = {
     body: 'Integer id nunc sit semper purus. Bibendum at lacus ut arcu blandit montes vitae auctor libero. Hac condimentum dignissim nibh vulputate ut nunc. Amet nibh orci mi venenatis blandit vel et proin. Non hendrerit in vel ac diam.',
@@ -69,7 +70,7 @@ const testimonials = [
 
 export default function Testimonial() {
     return (
-        <div className="relative isolate bg-white pt-24 pb-32 sm:pt-32">
+        <div className="relative isolate bg-bg2 pt-24 pb-32 sm:pt-32">
             <div
                 aria-hidden="true"
                 className="absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl"
@@ -96,10 +97,10 @@ export default function Testimonial() {
             </div>
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl text-center">
-                    <h2 className="text-base/7 font-semibold text-indigo-600">Testimonials</h2>
-                    <p className="mt-2 text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">
+                    {/* <h2 className="text-base/7 font-semibold text-indigo-600">Testimonials</h2> */}
+                    <HeaderText className="mt-2 font-semibold text-balance text-gray-900 ">
                         What our clients say
-                    </p>
+                    </HeaderText>
                 </div>
                 <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm/6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
                     <figure className="rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">

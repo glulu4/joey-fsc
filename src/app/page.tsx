@@ -1,6 +1,9 @@
 
+import CTA from "@/components/CTA";
 import HorizontalSlider from "@/components/HorzontilSlider";
+import AreasOfFocus from "@/components/landing/AreasOfFocus";
 import Hero from "@/components/landing/Hero";
+import Location from "@/components/landing/Location";
 import ServicesGrid from "@/components/landing/Services";
 import Team from "@/components/landing/Team";
 import Testimonial from "@/components/landing/Testimonial";
@@ -10,25 +13,47 @@ import Row from "@/components/ui/Row";
 const Page = () => {
   return (
     <div className="min-h-screen">
-      <div>
+
+      <div className="container">
         <Hero />
       </div>
 
       <div >
         <WhyUs />
-
       </div>
 
-      <div className="py-24">
+
+
+
+    <div>
+      <AreasOfFocus className="pt-16"/>
+    </div>
+
+      {/* <div className="py-24">
         <Team />
-      </div>
+      </div> */}
 
-      <div className="flex flex-col items-center justify-center">
+
+
+
+      
+
+
+      <div className="py-32 bg-bg3 flex flex-col items-center justify-center">
         <HorizontalSlider />
       </div>
 
 
+      <div className="container">
+        <Location />
+      </div>
+
+
       <Testimonial />
+
+      <div>
+        <CTA/>
+      </div>
 
       {/* <div className="px-10">
         <Row

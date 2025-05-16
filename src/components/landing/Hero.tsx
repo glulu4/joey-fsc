@@ -143,6 +143,7 @@
 import Image from 'next/image';
 import React from 'react';
 import BodyText from '../ui/BodyText';
+import Button from '../Button';
 
 interface HeroSectionProps {
     imageUrl?: string;
@@ -151,7 +152,6 @@ interface HeroSectionProps {
     highlight?: string;
     subcopy?: string;
     ctaLabel?: string;
-    onCtaClick?: () => void;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
@@ -159,16 +159,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     imageAlt = 'Smiling person',
     highlight = 'New',
     subcopy = 'Serving Central Texas for over 50 years, we put patients’ needs first, providing superior care in a safe and compassionate environment.',
-    ctaLabel = 'Schedule an Appointment →',
-    onCtaClick,
+    ctaLabel = 'Schedule an Appointment',
 }) => (
-    <section className="pt-40 h-fit">
+    <section className="pt-52 h-fit">
         {/* Decorative circle behind image */}
 
         <div className="">
             {/* Headline */}
-            <div className="text-center max-w-3xl mx-auto ">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl  font-bold text-gray-900 leading-loose">
+            <div className="text-center sm:w-2/4 mx-auto">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
                     Facial Surgery Center
                     <br />
                     <span className="font-light">Transform Your Confidence with a </span>
@@ -177,7 +176,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 </h1>
             </div>
 
-            <div className="flex sm:flex-row items-center px-12 justify-between h-full ">
+            <div className="flex flex-col sm:flex-row items-center px-12 justify-between h-full ">
 
                 <div className='flex-[0.6]'>
 
@@ -191,17 +190,21 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 </div>
 
                 {/* Copy + CTA */}
-                <div className="flex flex-col items-center md:items-start space-y-6 ">
-                    <BodyText className="text-gray-700 max-w-md text-center md:text-left">
+                <div className="flex flex-col items-center md:items-start space-y-6 py-8">
+                    <BodyText variant='default' className="text-gray-600 max-w-md text-center md:text-left">
                         {subcopy}
                     </BodyText>
-                    <button
+                    {/* <button
                         type="button"
                         onClick={onCtaClick}
-                        className="bg-teal-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-teal-700 transition"
+                        className="bg-primary-teal text-white font-semibold py-3 px-8 rounded-full hover:bg-teal-700 transition"
                     >
                         {ctaLabel}
-                    </button>
+                    </button> */}
+                    <Button
+                        text={ctaLabel}
+                        href="#"
+                    />
                 </div>
             </div>
         </div>
