@@ -42,9 +42,8 @@ const config = {
         foreground: "hsl(var(--foreground))",
         // primaryBlue: '#0087FF',
         primaryYellow: '#FFBA01',
-        primaryOrange: '#F27249',
+        primaryOrange: '#ff8e1d',
 
-        primaryPurple: '#330072',
         primaryPink:'#FEB7B1',
         // primaryGreen: '#00CE00',
 
@@ -92,6 +91,7 @@ const config = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        serif: ["var(--font-serif)", ...fontFamily.serif],
       },
 
       fontSize: {

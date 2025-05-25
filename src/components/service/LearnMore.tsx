@@ -1,0 +1,191 @@
+// import React from 'react'
+// import HeaderText from '../ui/HeaderText'
+// import clsx from 'clsx'
+// import {Service} from '../../../public/services';
+
+
+// interface LearnMoreProps {
+//     service1: Service;
+//     service2: Service;
+//     className?: string;
+// }
+
+// export default function LearnMore({
+//     service1,
+//     service2,
+//     className,
+// }: LearnMoreProps
+// ) {
+
+//     const services = [service1, service2];
+//     return (
+//         <div className='flex flex-col items-center justify-center space-y-12 py-12'>
+
+//             <HeaderText>
+//                 Learn More
+//             </HeaderText>
+
+//             <div className={clsx('flex flex-col items-center justify-center space-y-5 w-full bg-slate-300',
+//                 "sm:flex-row sm:justify-between sm:items-center ",
+//                 "gap-10",
+//             )}>
+
+
+//                 {services.map((service, idx) => (
+//                     <div className='bg-white w-1/2 h-1/2  rounded-[28px] shadow-md flex flex-col items-center justify-center'>
+
+//                         <img
+//                             src={service.coverImg}
+//                             alt={service.serviceTitle}
+//                             className='w-full h-full object-cover rounded-[48px] sm:w-[500px] sm:h-[500px]'
+//                         />
+//                         <HeaderText>
+//                             {service.serviceTitle}
+//                         </HeaderText>
+//                         <p>
+//                             {service.description}
+//                         </p>
+//                     </div>
+
+//                 ))}  
+
+
+
+
+
+//             </div>
+
+
+//         </div>
+//     )
+// }
+
+
+import React from 'react'
+import HeaderText from '../ui/HeaderText'
+import clsx from 'clsx'
+import {Service, services} from '../../../public/services';
+
+interface LearnMoreProps {
+    service1Idx: number;
+    service2Idx: number;
+    className?: string;
+}
+
+export default function LearnMore({
+    service1Idx,
+    service2Idx,
+    className,
+}: LearnMoreProps) {
+
+
+    const indexes = [service1Idx, service2Idx];
+
+    console.log("indexes", indexes);
+    
+    // const services = [service1, service2];
+
+    // from slate-50 to 
+
+    return (
+        <section className={clsx(
+            'bg-gradient-to-br from-slate-50 to-blue-50 py-20',
+            className
+        )}>
+            <div className='container mx-auto px-4'>
+                {/* Header */}
+                <div className='text-center mb-16'>
+                    <HeaderText className='text-4xl md:text-5xl font-bold text-gray-900 mb-4'>
+                        Explore More Services
+                    </HeaderText>
+                    <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
+                        Discover other specialized treatments we offer to meet your oral health needs
+                    </p>
+                </div>
+
+                {/* Services Grid */}
+                <div className='grid md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto'>
+                    {indexes.map((serviceIdx, idx) => {
+
+                        const serviceKey = Object.keys(services)[serviceIdx];
+                        const service = services[serviceKey];
+
+
+                        console.log("serviceKey", serviceKey);
+                        
+
+                        
+                        
+                        return (
+                            <div
+                                key={idx}
+                                className='group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2'
+                            >
+                                {/* Image Container */}
+                                <div className='relative overflow-hidden'>
+                                    <img
+                                        src={service.coverImg}
+                                        alt={service.serviceTitle}
+                                        className='w-full h-72 lg:h-80 object-cover transition-transform duration-700 group-hover:scale-110'
+                                    />
+                                    <div className='absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
+                                </div>
+
+                                {/* Content */}
+                                <div className='p-8 lg:p-10'>
+                                    <HeaderText className='text-2xl lg:text-3xl font-bold text-gray-900 mb-4  transition-colors duration-300'>
+                                        {service.serviceTitle}
+                                    </HeaderText>
+
+                                    <p className='text-gray-600 text-lg leading-relaxed mb-8'>
+                                        {service.description}
+                                    </p>
+
+                                    {/* Learn More Button */}
+                                    <div className='flex justify-start'>
+                                        <a
+                                            href={`/service/${serviceKey}`}
+                                            className='inline-flex items-center px-8 py-4 bg-primary-teal text-white font-semibold rounded-xl hover:bg-primaryCyan transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl'>
+                                            <span>Learn More</span>
+                                            <svg
+                                                className='ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300'
+                                                fill='none'
+                                                stroke='currentColor'
+                                                viewBox='0 0 24 24'
+                                            >
+                                                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 8l4 4m0 0l-4 4m4-4H3' />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                {/* Decorative Element */}
+                                <div className='absolute top-4 right-4 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+                                    <svg className='w-6 h-6 text-blue-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M13 7h8m0 0v8m0-8l-8 8-4-4-6 6' />
+                                    </svg>
+                                </div>
+                            </div>
+                        )
+     
+})}
+                </div>
+
+                {/* Bottom CTA */}
+                {/* <div className='text-center mt-16'>
+                    <p className='text-lg text-gray-600 mb-6'>
+                        Have questions about our services?
+                    </p>
+                    <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                        <button className='px-8 py-3 bg-white text-blue-600 font-semibold rounded-xl border-2 border-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300 shadow-md'>
+                            Schedule Consultation
+                        </button>
+                        <button className='px-8 py-3 bg-gray-900 text-white font-semibold rounded-xl hover:bg-gray-800 transition-colors duration-300 shadow-md'>
+                            View All Services
+                        </button>
+                    </div>
+                </div> */}
+            </div>
+        </section>
+    )
+}

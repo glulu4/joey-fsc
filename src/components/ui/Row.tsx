@@ -83,11 +83,11 @@ export default function Row({
 }: RowProps) {
     return (
         <div
-            className={`${className} flex flex-col-reverse ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"
+            className={`${className} container flex flex-col-reverse ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"
                 } items-center justify-between w-full`}
         >
             <div className="flex-[0.6] max-w-xl justify-start text-left">
-                <HeaderText className={`mt-10 font-semibold ${headerColor}`}>
+                <HeaderText variant="small" className={`mt-10 font-semibold ${headerColor}`}>
                     {title}
                 </HeaderText>
                 <BodyText className={`mt-10 font-medium ${bodyColor}`}>
@@ -104,7 +104,7 @@ export default function Row({
                         alt={title}
                         width={500}
                         height={500}
-                        className="object-fill"
+                            className="object-fill  rounded-xl shadow-xl ring-1 ring-gray-400/10"
                     />
                 )}
             </div>

@@ -27,7 +27,7 @@ const incentives = [
 
 export default function WhyUs() {
     return (
-        <div className="py-14 bg-white ">
+        <div className="py-16 bg-bg2 ">
             <div className="mx-auto max-w-7xl py-24 sm:px-2 sm:py-32 lg:px-4">
                 <div className="mx-auto max-w-2xl px-4 lg:max-w-none">
                     {/* <div className="grid grid-cols-1 items-center justify-center gap-x-16 gap-y-10 lg:grid-cols-2"> */}

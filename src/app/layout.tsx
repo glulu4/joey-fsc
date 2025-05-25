@@ -2,13 +2,22 @@
 import { config } from "@/config";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { Inter, Manrope, Flamenco, Kalnia, Playfair_Display, Noto_Serif, Inria_Serif, Nunito, Alegreya, Lora } from "next/font/google";
 import "./globals.css";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import Providers from "@/components/theme-provider";
 
-const fontSans = Manrope({ subsets: ["latin"], variable: "--font-sans" });
+
+
+const fontSans = Nunito({ subsets: ["latin"], variable: "--font-sans" });
+
+const fontSerif = Lora({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  display: "swap",
+  weight: ["400", "500", "600", "700",],
+});
 
 export const metadata: Metadata = {
   title: {
@@ -30,7 +39,9 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans",
-          fontSans.variable
+          fontSans.variable,
+          fontSerif.variable,
+
         )}
       >
         <Providers
@@ -43,7 +54,7 @@ export default function RootLayout({
             <Header />
             {children}
             <Footer />
-            </main>
+          </main>
         </Providers>
       </body>
     </html>
