@@ -324,6 +324,8 @@ export const Header: FunctionComponent = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+
+    if (typeof window === "undefined") return;
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };

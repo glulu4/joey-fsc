@@ -1,5 +1,5 @@
 "use client";
-import React, {useRef} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
 import HeaderText from "./ui/HeaderText";
 import BodyText from "./ui/BodyText";
@@ -89,16 +89,19 @@ export const SAMPLE_DATA = [
 export default function HorizontalSlider() {
     const containerRef = useRef<HTMLDivElement>(null);
 
-    const [itemWidth, setItemWidth] = React.useState(() => {
+    const [itemWidth, setItemWidth] = useState<number>(400);
+    const [itemHeight, setItemHeight] = useState<number>(400);
 
-        if (isMobile){
-            return window.innerWidth * 0.8;
-        }
-        else{
-            return window.innerWidth * 0.4;
-        }
-        
-    });
+
+    useEffect(() => {
+
+        if (typeof window === "undefined") return;
+        const width = isMobile ? window.innerWidth * 0.8 : window.innerWidth * 0.4;
+        const height = window.innerHeight * 0.8;
+        setItemHeight(height);
+
+        setItemWidth(width);
+    }, []);
 
 
 
@@ -146,7 +149,7 @@ export default function HorizontalSlider() {
                         className={` bg-background snap-center shrink-0 rounded-3xl shadow-md flex flex-col items-center justify-around text-center p-6`}
                         style={{
                             width: `${itemWidth}px`,
-                            height: window.innerHeight * 0.8,//"400px",
+                            height: itemHeight + "px",
                         }}
                     >
                         <div className="self-start text-left w-3/4 space-y-6">
