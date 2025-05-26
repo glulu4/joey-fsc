@@ -9,58 +9,74 @@ import {isMobile} from 'react-device-detect';
 export const SAMPLE_DATA = [
     
 {
-    
+   
     name: "Anesthesia",
     img: "/images/services/anesthesia.png",
-},
+        href: "/service/anesthesia",
 
+
+},
 
     {
     name: "Bone Grafting",
     img: "/images/services/bone-graft.png",
+        href: "/service/bone-grafting",
+    
     },
+
     {
     name: "Botox",
     img: "/images/services/botox.png",
+        href: "/service/botox-and-filler"
     },
+
     {
     name: "Facial Trauma",
     img: "/images/services/facial-trauma.png",
+        href: "/service/facial-trauma",
     },
     {
     name: "Genioplasty / Chin Surgery",
     img: "/images/services/genioplasty.png",
+        href: "/service/genioplasty",
 
     },
     {
         name: "Dental Implants",
         img: "/images/services/implants.png",
+        href: "/service/dental-implants",
     },
     {
         name: "Oral Pathology",
         img: "/images/services/oral-pathology.png",
+        href: "/service/oral-pathology",
     },
     {
         name: "Orthognathic Surgery",
         img: "/images/services/orthognathic.png",
+        href: "/service/orthognathic-surgery",
     },
     {
         name: "Sleep Apnea",
     img: "/images/services/sleep-apnea.png",
+        href: "/service/sleep-apnea",
     },
     {
-    name: "TMJ",
-    img: "/images/services/tmj.png",
-   
+        name: "TMJ",
+        img: "/images/services/tmj.png",
+        href: "/service/tmj",
     },
+
     {
         name: "Tooth Extractions",
         img: "/images/services/tooth-extract.png",
+        href: "/service/extractions",
         
     },
     {
         name: "Wisdom Teeth",
         img: "/images/services/wisdom-tooth.png",
+        href: "/service/wisdom-tooth",
     },
 
 
@@ -98,7 +114,7 @@ export default function HorizontalSlider() {
         <div className="flex flex-col items-center w-full px-4">
 
             <div className="flex flex-row items-center justify-between w-full ">
-                <HeaderText className=" text-gray-950 px-6">
+                <HeaderText className="font-medium font-serif text-gray-950 px-6">
                     Services We Offer
                 </HeaderText>
                 <div className="flex items-center gap-4">
@@ -124,7 +140,8 @@ export default function HorizontalSlider() {
                 className="w-full overflow-x-auto scroll-smooth snap-x snap-mandatory flex gap-6 py-6"
             >
                 {SAMPLE_DATA.map((item, idx) => (
-                    <div
+                    <a
+                        href={item.href}  
                         key={idx}
                         className={` bg-background snap-center shrink-0 rounded-3xl shadow-md flex flex-col items-center justify-around text-center p-6`}
                         style={{
@@ -133,7 +150,7 @@ export default function HorizontalSlider() {
                         }}
                     >
                         <div className="self-start text-left w-3/4 space-y-6">
-                            <HeaderText variant="small" className="text-gray-950 font-semibold" >
+                            <HeaderText variant="small" className="text-gray-950" >
                                {item.name}
                             </HeaderText>          
                             <BodyText className="text-gray-600 ">
@@ -153,7 +170,7 @@ export default function HorizontalSlider() {
                             />
                         </div>
 
-                    </div>
+                    </a>
                 ))}
             </div>
 

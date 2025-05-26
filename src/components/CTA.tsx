@@ -1,20 +1,46 @@
-import React from 'react'
+"use client"
+import React, {useEffect} from 'react'
 import HeaderText from './ui/HeaderText'
 import BodyText from './ui/BodyText'
 import Button from './Button'
 import {RoughNotation} from 'react-rough-notation'
+import { isMobile } from 'react-device-detect'
 
 export default function CTA() {
-  return (
-    <div className='flex flex-col items-center justify-center py-32 '>
 
-        <div className='flex flex-col items-center justify-center w-2/4 mx-auto text-center space-y-8'>
+  const [padding, setPadding] = React.useState(0)
+  const [strokeWidth, setStrokeWidth] = React.useState(1)
+
+  useEffect(() => {
+
+
+    if (isMobile) {
+      setPadding(4)
+      setStrokeWidth(4)
+    }
+    else {
+      setPadding(12)
+      setStrokeWidth(8)
+    }
+
+
+  }, [])
+
+  return (
+    <div className='flex flex-col items-center justify-center py-32'>
+
+        <div className='flex flex-col items-center justify-center w-3/4 mx-auto text-center space-y-8'>
             <HeaderText className='text-gray-950 font-semibold'>
-                Schedule Your {' '}
+
+              <span className=''>
+            Schedule Your {' '}
+
+              </span>
                 
-          <RoughNotation multiline type="circle" show={true} color='#69d9e3' animationDuration={1000} iterations={1} padding={5} strokeWidth={8}>
-                Consultation 
-          </RoughNotation>
+          <RoughNotation 
+           type="circle" show={true} color='#69d9e3' animationDuration={1000} iterations={1} padding={padding} strokeWidth={strokeWidth}>
+                      Consultation 
+                </RoughNotation>
                 Today
             </HeaderText>
             <BodyText>

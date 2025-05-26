@@ -1,5 +1,6 @@
 import clsx from "clsx"
 import HeaderText from "../ui/HeaderText"
+import Image from "next/image"
 
 const featuredTestimonial = {
     body: 'Integer id nunc sit semper purus. Bibendum at lacus ut arcu blandit montes vitae auctor libero. Hac condimentum dignissim nibh vulputate ut nunc. Amet nibh orci mi venenatis blandit vel et proin. Non hendrerit in vel ac diam.',
@@ -108,8 +109,10 @@ export default function Testimonial() {
                             <p>{`“${featuredTestimonial.body}”`}</p>
                         </blockquote>
                         <figcaption className="flex flex-wrap items-center gap-x-4 gap-y-4 border-t border-gray-900/10 px-6 py-4 sm:flex-nowrap">
-                            <img
-                                alt=""
+                            <Image
+                                width={40}
+                                height={40}
+                                alt="Facial Surgery Center"
                                 src={featuredTestimonial.author.imageUrl}
                                 className="size-10 flex-none rounded-full bg-gray-50"
                             />
@@ -117,7 +120,10 @@ export default function Testimonial() {
                                 <div className="font-semibold">{featuredTestimonial.author.name}</div>
                                 <div className="text-gray-600">{`@${featuredTestimonial.author.handle}`}</div>
                             </div>
-                            <img alt="" src={featuredTestimonial.author.logoUrl} className="h-10 w-auto flex-none" />
+                            <Image
+                                width={40}
+                                height={40} 
+                            alt="Facial Surgery Center" src={featuredTestimonial.author.logoUrl} className="h-10 w-auto flex-none" />
                         </figcaption>
                     </figure>
                     {testimonials.map((columnGroup, columnGroupIdx) => (
@@ -142,7 +148,10 @@ export default function Testimonial() {
                                                 <p>{`“${testimonial.body}”`}</p>
                                             </blockquote>
                                             <figcaption className="mt-6 flex items-center gap-x-4">
-                                                <img alt="" src={testimonial.author.imageUrl} className="size-10 rounded-full bg-gray-50" />
+                                                <Image
+                                                width={40}
+                                                height={40}
+                                                 alt="Facial Surgery Center" src={testimonial.author.imageUrl} className="size-10 rounded-full bg-gray-50" />
                                                 <div>
                                                     <div className="font-semibold">{testimonial.author.name}</div>
                                                     <div className="text-gray-600">{`@${testimonial.author.handle}`}</div>

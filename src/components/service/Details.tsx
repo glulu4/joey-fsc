@@ -1,6 +1,7 @@
 import clsx from "clsx"
 import HeaderText from "../ui/HeaderText"
 import BodyText from "../ui/BodyText"
+import Image from "next/image"
 
 const features = [
     {
@@ -54,7 +55,9 @@ export default function Details() {
                                     'flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8',
                                 )}
                             >
-                                <img
+                                <Image
+                                    width={500}
+                                    height={300}
                                     alt={feature.imageAlt}
                                     src="/images/services/wisdom/wisdom-tooth-img3.png"
                                     className="aspect-5/2 w-full rounded-lg bg-gray-100 object-cover"

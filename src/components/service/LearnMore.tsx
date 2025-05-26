@@ -65,6 +65,7 @@ import React from 'react'
 import HeaderText from '../ui/HeaderText'
 import clsx from 'clsx'
 import {Service, services} from '../../../public/services';
+import Image from 'next/image';
 
 interface LearnMoreProps {
     service1Idx: number;
@@ -123,7 +124,9 @@ export default function LearnMore({
                             >
                                 {/* Image Container */}
                                 <div className='relative overflow-hidden'>
-                                    <img
+                                    <Image
+                                        width={500}
+                                        height={500}
                                         src={service.coverImg}
                                         alt={service.serviceTitle}
                                         className='w-full h-72 lg:h-80 object-cover transition-transform duration-700 group-hover:scale-110'

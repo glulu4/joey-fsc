@@ -187,8 +187,6 @@ import {useRef} from "react";
 import clsx from "clsx";
 import HeaderText from "../ui/HeaderText";
 import {Button} from "../ui/button";
-import Link from "next/link";
-import {ArrowRight} from "lucide-react";
 
 interface CardProps {
     imgSrc: string;
@@ -262,7 +260,9 @@ const Card = ({i, imgSrc, progress, range, targetScale, title, description, colo
                             className="w-full h-full"
                             style={{scale: imageScale}}
                         >
-                            <img
+                            <Image
+                                width={500}
+                                height={500}
                                 src={imgSrc}
                                 alt={title}
                                 className="object-cover w-full h-full"

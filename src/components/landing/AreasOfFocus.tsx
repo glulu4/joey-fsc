@@ -18,7 +18,7 @@ export default function AreasOfFocus({ className }: AreasOfFocusProps) {
       <div className='mx-auto max-w-3xl'>
 
 
-            <HeaderText className='text-center mb-12'>
+            <HeaderText className='text-center mb-12 font-medium font-serif text-gray-950'>
             <RoughNotation multiline type="underline" show={true} color='#ff8e1d' animationDuration={1000} iterations={1} padding={1} strokeWidth={8}>
 
               Areas We Treat

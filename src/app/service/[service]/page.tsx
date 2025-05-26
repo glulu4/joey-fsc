@@ -12,7 +12,7 @@ import LearnMore from '@/components/service/LearnMore';
 export default async function page({
   params,
 }: {
-  params: {service: string}
+  params: Promise<{service: string}>
 }) {
 
   const {service} = await params;

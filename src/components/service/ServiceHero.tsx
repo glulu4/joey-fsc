@@ -2,6 +2,7 @@ import clsx from 'clsx'
 import React from 'react'
 import HeaderText from '../ui/HeaderText'
 import BodyText from '../ui/BodyText';
+import Image from 'next/image';
 
 interface ServiceHeroProps {
     title: string;
@@ -39,9 +40,11 @@ export default function ServiceHero({
         </div>
 
         <div>
-            <img
+            <Image
                 src={imageSrc}
                 alt={title}
+                width={500}
+                height={500}
                 className='w-full h-full object-cover rounded-[48px] sm:w-[500px] sm:h-[500px]'
             />
         </div>

@@ -1,196 +1,3 @@
-// "use client";
-// import {
-//   Sheet,
-//   SheetContent,
-//   SheetDescription,
-//   SheetHeader,
-//   SheetTrigger,
-// } from "@/components/ui/sheet";
-// import {cn} from "@/lib/utils";
-// import {ChevronDown, Menu} from "lucide-react";
-// import Image from "next/image";
-// import Link from "next/link";
-// import {FunctionComponent, useEffect, useState} from "react";
-// import Button from "./Button";
-// import {usePathname} from "next/navigation";
-
-
-// // Wisdom tooth
-// // extraction
-// // Dental implants
-// // Orthognathic surgery
-// // Genioplasty and chin implants
-// // Tooth extraction
-// // TMJ dysfunction
-// // Facial trauma
-// // Oral pathology
-// // Anesthesia
-// // Botox and filler
-// // Sleep Apnea
-// interface MenuItem {
-//   name: string;
-//   href: string;
-//   openInNewTab?: boolean;
-//   subItems?: {name: string; href: string}[];
-// }
-
-// const menuItems: MenuItem[] = [
-//   {name: "Home", href: "/"},
-//   {name: "For Patients", href: "/about",
-//     subItems:[
-//       {name: "What to Expect", href: "/"},
-//       {name: "Pre Op", href: "/"},
-//       {name: "Post Op", href: "/"},
-
-//     ]
-//   },
-//   {name: "Services", 
-//     href: "/about",
-//     subItems: [
-//       {name: "Wisdom Tooth", href: "/"},
-//       {name: "Extractions", href: "/"},
-//       {name: "Dental Implants", href: "/"},
-//       {name: "Orthognathic surgery", href: "/"},
-//       {name: "Genioplasty", href: "/"},
-//       {name: "Tooth Extraction", href: "/"},
-//       {name: "TMJ Disorder", href: "/"},
-//       {name: "Facial Trauma", href: "/"},
-//       {name: "Oral pathology", href: "/"},
-//       {name: "Anesthesia", href: "/"},
-//       {name: "Botox and Filler", href: "/"},
-//       {name: "Sleep Apnea", href: "/"},
-
-
-      
-
-//     ],
-//   },
-
-//   {
-//     name: "About",
-//     href: "/about",
-//     subItems: [
-//       {name: "Meet the Doctors", href: "/about/team"},
-//       {name: "Meet the Team", href: "/about/mission"},
-//       {name: "About FSC", href: "/about/history"},
-//     ],
-//   },
-//   {name: "Contact", href: "/Contact"},
-// ];
-
-// export const Navigation: FunctionComponent = () => {
-//   const pathname = usePathname();
-
-//   return (
-//     <nav>
-//       <div className="hidden md:flex items-center">
-//         {menuItems.map((item) => (
-//           <div
-//             key={item.href}
-//             className={cn(
-//               "ml-4 md:ml-8",
-//               item.subItems && "dropdown relative inline-block group"
-//             )}
-//           >
-//             <a
-//               href={item.href}
-//               target={item.openInNewTab ? "_blank" : "_self"}
-//               className={cn(
-//                 "hover:text-primary text-bold-22 font-semibold",
-//                 item.subItems &&
-//                 "dropbtn px-4 py-2 border-none",
-//                 pathname === item.href && "font-semibold"
-//               )}
-//             >
-//               {item.name} {item.subItems &&  <ChevronDown className="inline" />}
-//             </a>
-//             {item.subItems && (
-//               <div className="dropdown-content hidden group-hover:block absolute rounded-md bg-white w-full shadow-lg z-10">
-//                 {item.subItems.map((subItem) => (
-//                   <div
-//                     className="hover:bg-primary-teal m-1 rounded-md transition-colors duration-300 ease-in-out"
-//                     key={subItem.href}
-//                   >                    <a
-//                       key={subItem.href}
-//                       href={subItem.href}
-//                       className="block px-4 py-2 text-md font-medium text-black hover:text-white"
-//                     >
-//                       {subItem.name}
-//                     </a>
-//                   </div>
-    
-//                 ))}
-//               </div>
-//             )}
-//           </div>
-//         ))}
-//       </div>
-//       <div className="md:hidden">
-//         <Sheet>
-//           <SheetTrigger>
-//             <Menu size="24" />
-//           </SheetTrigger>
-//           <SheetContent>
-//             <SheetHeader>
-//               <SheetDescription>
-//                 {menuItems.map((item) => (
-//                   <a
-//                     key={item.href}
-//                     href={item.href}
-//                     target={item.openInNewTab ? "_blank" : "_self"}
-//                     className={cn(
-//                       "block py-2",
-//                       pathname === item.href && "font-semibold"
-//                     )}
-//                   >
-//                     {item.name}
-//                   </a>
-//                 ))}
-//               </SheetDescription>
-//             </SheetHeader>
-//           </SheetContent>
-//         </Sheet>
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export const Header: FunctionComponent = () => {
-//   const [scrolled, setScrolled] = useState(false);
-
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       setScrolled(window.scrollY > 10);
-//     };
-
-//     window.addEventListener("scroll", handleScroll);
-//     return () => window.removeEventListener("scroll", handleScroll);
-//   }, []);
-
-//   return (
-//     <section
-//       className={cn(
-//         "fixed top-0 left-0 w-full flex items-center justify-between px-8 z-50 transition-all",
-//         scrolled ? "backdrop-blur-md bg-background/70 shadow-sm" : "bg-transparent"
-//       )}
-//     >
-//       <Link href="/">
-//         <Image
-//           src="/images/Group.svg"
-//           alt="Logo"
-//           width={100}
-//           height={100}
-//           className="w-16 h-16 md:w-32 md:h-32 py-0"
-//           priority
-//         />
-//       </Link>
-//       <Navigation />
-//       <div className="hidden md:flex items-center">
-//         <Button text={"Schedule Today"} href="#" />
-//       </div>
-//     </section>
-//   );
-// };
 "use client";
 import {
   Sheet,
@@ -200,10 +7,10 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import {cn} from "@/lib/utils";
-import {ChevronDown, Menu} from "lucide-react";
+import {ChevronDown, Mail, MapPin, Menu, Phone, X} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import {FunctionComponent, useEffect, useState} from "react";
+import {FunctionComponent, useEffect, useState, useRef} from "react";
 import Button from "./Button";
 import {usePathname} from "next/navigation";
 
@@ -218,7 +25,7 @@ const menuItems: MenuItem[] = [
   {name: "Home", href: "/"},
   {
     name: "For Patients",
-    href: "/for-patients",
+    href: "",
     subItems: [
       {name: "What to Expect", href: "/for-patients/what-to-expect"},
       {name: "Pre Op", href: "/for-patients/pre-op"},
@@ -230,9 +37,9 @@ const menuItems: MenuItem[] = [
     href: "/services",
     subItems: [
       {name: "Wisdom Tooth", href: "/service/wisdom-tooth"},
-      // {name: "Extractions", href: "/service/extractions"},
       {name: "Dental Implants", href: "/service/dental-implants"},
       {name: "Orthognathic Surgery", href: "/service/orthognathic-surgery"},
+      {name: "Bone Grafting", href: "/service/bone-grafting"},
       {name: "Genioplasty", href: "/service/genioplasty"},
       {name: "Tooth Extraction", href: "/service/extractions"},
       {name: "TMJ Disorder", href: "/service/tmj-disorder"},
@@ -248,45 +55,108 @@ const menuItems: MenuItem[] = [
     href: "/about",
     subItems: [
       {name: "Meet the Doctors", href: "/about/meet-the-doctors"},
-      {name: "Meet the Team", href: "/about/mission"},
+      {name: "Meet the Team", href: "/about/meet-the-team"},
       {name: "About FSC", href: "/about"},
     ],
   },
-  {name: "Contact", href: "/Contact"},
+  {name: "Contact", href: "/contact"},
 ];
 
 export const Navigation: FunctionComponent = () => {
   const pathname = usePathname();
-  const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const [openDesktopMenu, setOpenDesktopMenu] = useState<string | null>(null);
+  const [openMobileMenu, setOpenMobileMenu] = useState<string | null>(null);
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const dropdownRefs = useRef<{[key: string]: HTMLDivElement | null}>({});
 
-  const toggleSubMenu = (name: string) => {
-    setOpenMenu(openMenu === name ? null : name);
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const clickedOutside = Object.values(dropdownRefs.current).every(
+        ref => ref && !ref.contains(event.target as Node)
+      );
+
+      if (clickedOutside) {
+        setOpenDesktopMenu(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const toggleDesktopMenu = (name: string) => {
+    setOpenDesktopMenu(openDesktopMenu === name ? null : name);
   };
 
+  const toggleMobileSubMenu = (name: string) => {
+    setOpenMobileMenu(openMobileMenu === name ? null : name);
+  };
+
+  // Reset mobile menu state when sheet closes
+  useEffect(() => {
+    if (!isSheetOpen) {
+      setOpenMobileMenu(null);
+    }
+  }, [isSheetOpen]);
+
   return (
-    <nav>
+    <nav className="z-50">
+      {/* Desktop Navigation */}
       <div className="hidden md:flex items-center">
         {menuItems.map((item) => (
           <div
             key={item.href}
             className={cn(
               "ml-4 md:ml-8",
-              item.subItems && "dropdown relative inline-block group"
+              item.subItems && "relative"
             )}
+            ref={(el) => {
+              if (item.subItems) {
+                dropdownRefs.current[item.name] = el;
+              }
+            }}
           >
-            <a
-              href={item.href}
-              target={item.openInNewTab ? "_blank" : "_self"}
-              className={cn(
-                "hover:text-primary text-bold-22 font-semibold",
-                item.subItems && "dropbtn px-4 py-2 border-none",
-                pathname === item.href && "font-semibold"
-              )}
-            >
-              {item.name} {item.subItems && <ChevronDown className="inline" />}
-            </a>
+            {item.subItems ? (
+              <button
+                onClick={() => toggleDesktopMenu(item.name)}
+                className={cn(
+                  "hover:text-primary text-bold-22 font-semibold flex items-center transition-colors duration-200",
+                  pathname === item.href && "font-semibold",
+                  "focus:outline-none focus:text-primary"
+                )}
+              >
+                {item.name}
+                <ChevronDown
+                  className={cn(
+                    "ml-1 h-4 w-4 transition-transform duration-200",
+                    openDesktopMenu === item.name && "rotate-180"
+                  )}
+                />
+              </button>
+            ) : (
+              <a
+                href={item.href}
+                target={item.openInNewTab ? "_blank" : "_self"}
+                className={cn(
+                  "hover:text-primary text-bold-22 font-semibold transition-colors duration-200",
+                  pathname === item.href && "font-semibold"
+                )}
+              >
+                {item.name}
+              </a>
+            )}
+
             {item.subItems && (
-              <div className="dropdown-content hidden group-hover:block absolute rounded-md bg-white w-full shadow-lg z-10">
+              <div className={cn(
+                "absolute top-full left-0 mt-2 bg-white shadow-xl rounded-lg py-2 min-w-48 border border-gray-100",
+                "transform transition-all duration-200 origin-top z-50",
+                openDesktopMenu === item.name
+                  ? "opacity-100 scale-100 translate-y-0"
+                  : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
+              )}>
                 {item.subItems.map((subItem) => (
                   <div
                     className="hover:bg-primary-teal m-1 rounded-md transition-colors duration-300 ease-in-out"
@@ -294,7 +164,11 @@ export const Navigation: FunctionComponent = () => {
                   >
                     <a
                       href={subItem.href}
-                      className="block px-4 py-2 text-md font-medium text-black hover:text-white"
+                      className={cn(
+                        "block px-4 py-2 text-md font-medium text-black hover:text-white transition-colors duration-150",
+                        pathname === subItem.href && "font-semibold"
+                      )}
+                      onClick={() => setOpenDesktopMenu(null)}
                     >
                       {subItem.name}
                     </a>
@@ -305,57 +179,140 @@ export const Navigation: FunctionComponent = () => {
           </div>
         ))}
       </div>
+
+      {/* Mobile Navigation */}
       <div className="md:hidden">
-        <Sheet>
-          <SheetTrigger>
-            <Menu size="24" />
+        <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+          <SheetTrigger asChild>
+            <button
+              className="p-2 hover:bg-gray-100 rounded-md transition-colors duration-200"
+              aria-label="Open menu"
+            >
+              <Menu size="24" />
+            </button>
           </SheetTrigger>
-          <SheetContent>
-            <SheetHeader>
-              <SheetDescription>
+          <SheetContent
+            side="right"
+            className="bg-background [&>button]:hidden text-black border-none shadow-2xl w-full max-w-full overflow-y-auto"
+          >
+            <SheetHeader className="text-left border-b border-white/20 pb-6 mb-6">
+              <div className="flex items-center justify-between">
+                <h2 className="text-2xl font-bold">Menu</h2>
+                <button
+                  onClick={() => setIsSheetOpen(false)}
+                  className="p-2 hover:bg-white/20 rounded-md transition-colors duration-200"
+                  aria-label="Close menu"
+                >
+                  <X size="20" />
+                </button>
+              </div>
+            </SheetHeader>
+
+            <SheetDescription asChild>
+              <nav className="space-y-2 text-black">
                 {menuItems.map((item) => (
                   <div key={item.href}>
-                    <div
-                      className={cn(
-                        "block py-2",
-                        pathname === item.href && "font-semibold",
-                        item.subItems && "flex justify-between items-center cursor-pointer"
-                      )}
-                      onClick={item.subItems ? () => toggleSubMenu(item.name) : undefined}
-                    >
-                      <a
+                    {item.subItems ? (
+                      <>
+                        <button
+                          onClick={() => toggleMobileSubMenu(item.name)}
+                          className={cn(
+                            "flex items-center justify-between w-full py-3 px-4 rounded-lg text-lg transition-all duration-200",
+                            "hover:bg-white/20",
+                            openMobileMenu === item.name && "bg-white/20"
+                          )}
+                        >
+                          <span className="font-semibold">{item.name}</span>
+                          <ChevronDown
+                            className={cn(
+                              "h-4 w-4 transition-transform duration-200",
+                              openMobileMenu === item.name && "rotate-180"
+                            )}
+                          />
+                        </button>
+
+                        <div className={cn(
+                          "overflow-auto transition-all duration-300 ease-in-out",
+                          openMobileMenu === item.name ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                        )}>
+                          <div className="pl-6 pt-2 space-y-1">
+                            {item.subItems.map((subItem) => (
+                              <Link
+                                key={subItem.href}
+                                href={subItem.href}
+                                className={cn(
+                                  "block py-2 px-4 rounded-md text-base transition-all duration-200",
+                                  "hover:bg-white/10 hover:translate-x-1",
+                                  pathname === subItem.href && "font-bold text-primary-teal bg-white/10"
+                                )}
+                                onClick={() => {
+                                  setOpenMobileMenu(null);
+                                  setIsSheetOpen(false);
+                                }}
+                              >
+                                {subItem.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </>
+                    ) : (
+                      <Link
                         href={item.href}
                         target={item.openInNewTab ? "_blank" : "_self"}
-                        className="block"
+                        className={cn(
+                          "block py-3 px-4 rounded-lg text-lg transition-all duration-200 font-semibold",
+                          "hover:bg-white/20 hover:translate-x-2",
+                          pathname === item.href && "font-bold bg-white/20"
+                        )}
+                        onClick={() => setIsSheetOpen(false)}
                       >
                         {item.name}
-                      </a>
-                      {item.subItems && (
-                        <ChevronDown
-                          className={cn(
-                            "transition-transform",
-                            openMenu === item.name && "rotate-180"
-                          )}
-                        />
-                      )}
-                    </div>
-                    {item.subItems && openMenu === item.name && (
-                      <div className="pl-4">
-                        {item.subItems.map((subItem) => (
-                          <a
-                            key={subItem.href}
-                            href={subItem.href}
-                            className="block py-2 text-md font-medium text-black hover:text-primary"
-                          >
-                            {subItem.name}
-                          </a>
-                        ))}
-                      </div>
+                      </Link>
                     )}
                   </div>
                 ))}
-              </SheetDescription>
-            </SheetHeader>
+
+                {/* Call to Action Button in Mobile */}
+                <div className="pt-6 mt-6 border-t border-white/20">
+                  <Link
+                    href="/contact"
+                    className="block py-4 px-6 bg-primary-teal rounded-lg text-lg font-semibold transition-all duration-200 text-white text-center hover:bg-gray-100 hover:scale-105 shadow-lg"
+                    onClick={() => setIsSheetOpen(false)}
+                  >
+                    Schedule Today
+                  </Link>
+                </div>
+
+
+
+
+                <div className="pt-8 mt-8 border-t border-white/20">
+                  <h3 className="text-lg font-semibold mb-4">Get In Touch</h3>
+                  <div className="space-y-3">
+                    <a
+                      href="tel:+1234567890"
+                      className="flex items-center space-x-3 py-2 px-4 rounded-lg hover:bg-white/10 transition-colors duration-200"
+                    >
+                      <Phone className="text-primaryCyan"  size="18" />
+                      <span>(267) 497-3183</span>
+                    </a>
+                    <a
+                      href="mailto:sales@paragonexterior.com"
+                      className="flex items-center space-x-3 py-2 px-4 rounded-lg hover:bg-white/10 transition-colors duration-200"
+                    >
+                      <Mail className="text-primaryOrange" size="18" />
+                      <span>sales@paragonexterior.com</span>
+                    </a>
+                    <div className="flex items-center space-x-3 py-2 px-4">
+                      <MapPin className="text-red-700" size="18" />
+                      <span>Feasterville-Trevose, PA</span>
+                    </div>
+                  </div>
+                </div>
+
+              </nav>
+            </SheetDescription>
           </SheetContent>
         </Sheet>
       </div>
@@ -378,23 +335,23 @@ export const Header: FunctionComponent = () => {
   return (
     <section
       className={cn(
-        "fixed top-0 left-0 w-full flex items-center justify-between px-8 z-50 transition-all",
-        scrolled ? "backdrop-blur-md bg-background/70 shadow-sm" : "bg - transparent"
+        "fixed top-0 left-0 w-full flex items-center justify-between px-8 z-50 transition-all duration-300",
+        scrolled ? "backdrop-blur-md bg-background/70 shadow-lg" : "bg-transparent"
       )}
     >
-      <Link href="/">
+      <Link href="/" className="transform hover:scale-105 transition-transform duration-200">
         <Image
           src="/images/Group.svg"
           alt="Logo"
           width={100}
           height={100}
-          className="w-16 h-16 md:w-32 md:h-32 py-0"
+          className="w-24 h-24 md:w-32 md:h-32 py-0"
           priority
         />
       </Link>
       <Navigation />
       <div className="hidden md:flex items-center">
-        <Button text={"Schedule Today"} href="#" />
+        <Button text={"Schedule Today"} href="/contact" />
       </div>
     </section>
   );

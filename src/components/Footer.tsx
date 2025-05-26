@@ -1,185 +1,30 @@
-// // "use client";
-// // import { config } from "@/config";
-// // import { Rss } from "lucide-react";
-// // import Link from "next/link";
-// // import { FunctionComponent } from "react";
-// // import { DarkModeToggle } from "./DarkModeToggle";
-// // import { Button } from "./ui/button";
 
+import {config} from "@/config"
+import Image from "next/image"
 import {FunctionComponent} from "react"
 
-// // export const Footer: FunctionComponent = () => {
-// //   return (
-// //     <section className="mt-8 md:mt-16 mb-12">
-// //       <div className="flex items-center justify-between">
-// //         <div className="text-sm text-muted-foreground">
-// //           © {config.name.copyright} {new Date().getFullYear()}
-// //         </div>
-// //         <div className="text-xs text-muted-foreground hidden lg:block">
-// //           <Link
-// //             href={`${config.baseUrl}`}
-// //           >
-// //             More text
-// //           </Link>
-// //         </div>
-// //         <div>
-// //           <Link href="/rss">
-// //             <Button variant="ghost" className="p-2">
-// //               <Rss className="w-4 h-4" />
-// //             </Button>
-// //           </Link>
-// //           {/* <DarkModeToggle /> */}
-// //         </div>
-// //       </div>
-// //       <div className="text-xs text-muted-foreground lg:hidden">
-// //         <Link
-// //           href={`${config.baseUrl}`}
-// //         >
-// //           SOME MORE TEXT
-// //         </Link>
-// //       </div>
-// //     </section>
-// //   );
-// // };
-
-
-
-// import {config} from "@/config"
-// import {FunctionComponent} from "react"
-
-// const navigation = {
-//   right: [
-//     // {name: 'Analytics', },
-//     {name: 'International Board of Directors', bold: true},
-//     {name: 'Professor Ron E. Samet, MD', },
-//     {name: 'Dr. Dan Zeloof, MD', },
-//     {name: 'Professor Suzanne Karan, MD', },
-//     {name: 'Dr. Leonardo Gendzel, MD', },
-//     {name: 'Professor Joel Symons, MD', },
-//     {name: 'Professor Ruthi Landau, MD', },
-//     {name: 'line-break', },
-//     {name: 'Israel Society of Anesthesiologists', bold: true},
-//     {name: 'Professor Yehuda Ginosar, MBBS', },
-//     {name: 'Professor Barak Cohen, MD', },
-
-
-
-
-
-//   ],
-//   middle: [
-//     {name: "Israel Society of Anesthesiologists", href: 'https://www.ima.org.il/mainsitenew/editunion.aspx?unionid=740', },
-//     {name: 'Israel Ministry of Health', href: 'https://www.gov.il/en/departments/ministry_of_health/govil-landing-page', bold: false},
-//     {name: "Nefesh B'Nefesh", href: 'https://www.nbn.org.il'},
-
-//   ],
-//   contact: [
-//     {name: 'Israel • USA • Australia', bold: false},
-//     {
-//       name: 'contact@isaacc18.org',
-//     },
-//     {name: "US 501(c)(3) status • EIN: 31-2174742", },
-//     {name: 'Donate Now', href: 'https://buy.stripe.com/5kA15W4iQfdv0XSbII'},
-//   ],
-// }
-
-// export const Footer: FunctionComponent = () => {
-//   return (
-//     <footer className="bg-gradient-to-br from-orange-100 to-orange-200">
-//       <div className="mx-auto max-w-7xl px-6 pt-16 pb-8 sm:pt-24 lg:px-8 lg:pt-32">
-
-//         {/* <div className="flex justify-around w-full bg-slate-500"> */}
-//         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-16 font-serif justify-center align-middle">
-//           {/* Column 1 */}
-//           <div>
-//             <h3 className=" font-semibold text-body2 text-black mb-6">ISAACC18</h3>
-
-//             <ul role="list" className="space-y-4">
-//               {navigation.right.map((item) => (
-
-//                 <li key={item.name} className="flex flex-col">
-
-//                   {item.name === "line-break" ? (
-//                     <div className="h-2"></div>
-//                   ) : (
-//                     <p className={`sm:text-xl text-gray-900 hover:text-white ${item.bold ? "font-bold text-black" : ""}`}>
-//                       {item.name}
-//                     </p>
-//                   )}
-//                 </li>
-//               ))}
-//             </ul>
-//           </div>
-
-//           {/* Column 2 */}
-//           <div>
-//             <h3 className="text-sm/6 font-semibold text-body2  text-black mb-6">Affiliations</h3>
-//             <ul role="list" className="space-y-4">
-//               {navigation.middle.map((item) => (
-//                 <li key={item.name}>
-//                   <a href={item.href} className={`sm:text-xl text-gray-900 hover:text-white ${item.bold ? "font-bold text-black" : ""}`}>
-//                     {item.name}
-//                   </a>
-//                 </li>
-//               ))}
-//             </ul>
-//           </div>
-
-//           {/* Column 3 */}
-//           <div className="justify-end">
-//             <h3 className="text-sm/6 font-semibold text-black text-body2 mb-6">Contact Us</h3>
-//             <ul role="list" className="space-y-4">
-//               {navigation.contact.map((item) => (
-//                 <li key={item.name}>
-//                   <a style={{
-//                     fontVariantLigatures: "none"
-//                   }} href={item.href} className={`sm:text-xl text-gray-900 hover:text-white ${item.bold ? "font-bold text-black" : ""}`}>
-//                     {item.name}
-//                   </a>
-//                 </li>
-//               ))}
-//             </ul>
-//           </div>
-//         </div>
-
-
-
-//         <div className="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-center">
-
-//           <p className="mt-8 text-sm/6 text-center text-gray-900 md:order-1 md:mt-0 font-serif">
-//             {config.name.name} © {new Date().getFullYear()}
-//           </p>
-//         </div>
-//       </div>
-//     </footer>
-//   )
-// }
-
-
 const navigation = {
-  solutions: [
-    {name: 'Marketing', href: '#'},
-    {name: 'Analytics', href: '#'},
-    {name: 'Automation', href: '#'},
-    {name: 'Commerce', href: '#'},
-    {name: 'Insights', href: '#'},
+  forPatients: [
+    {name: 'What to Expect', href: '/for-patients/what-to-expect'},
+    {name: 'Pre Op', href: '/for-patients/pre-op'},
+    {name: "Post Op", href: "/for-patients/post-op"},
+
   ],
-  support: [
-    {name: 'Submit ticket', href: '#'},
-    {name: 'Documentation', href: '#'},
-    {name: 'Guides', href: '#'},
+  about: [
+    {name: "Meet the Doctors", href: "/about/meet-the-doctors"},
+    {name: "Meet the Team", href: "/about/mission"},
+    {name: "About FSC", href: "/about"},
   ],
   company: [
-    {name: 'About', href: '#'},
-    {name: 'Blog', href: '#'},
-    {name: 'Jobs', href: '#'},
+    {name: "Contact", href: "/contact"},
+    {name: 'Blog', href: '/blog'},
     {name: 'Press', href: '#'},
   ],
-  legal: [
-    {name: 'Terms of service', href: '#'},
-    {name: 'Privacy policy', href: '#'},
-    {name: 'License', href: '#'},
-  ],
+  // legal: [
+  //   {name: 'Terms of service', href: '#'},
+  //   {name: 'Privacy policy', href: '#'},
+  //   {name: 'License', href: '#'},
+  // ],
   // social: [
   //   {
   //     name: 'Facebook',
@@ -249,109 +94,61 @@ export const Footer: FunctionComponent = () => {
   return (
     <footer className="bg-white">
 
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+      <div className="mx-auto w-5/6 px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <img
-            alt="Company name"
+          <Image
+            width={150}
+            height={50}
+            alt="Facial Surgery Center Logo"
             src="/images/logo.svg"
             className="sm:h-32 h-20"
           />
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm/6 font-semibold text-gray-900">Solutions</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.solutions.map((item) => (
-                    <li key={item.name}>
-                      <a href={item.href} className="text-sm/6 text-gray-600 hover:text-gray-900">
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm/6 font-semibold text-gray-900">Support</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.support.map((item) => (
-                    <li key={item.name}>
-                      <a href={item.href} className="text-sm/6 text-gray-600 hover:text-gray-900">
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <div className="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3 xl:col-span-2 xl:mt-0">
+            <div>
+              <h3 className="text-lg/6 font-bold text-primary-teal">For Patients</h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {navigation.forPatients.map((item) => (
+                  <li key={item.name}>
+                    <a href={item.href} className="text-md/6 text-gray-600 hover:text-gray-900">
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm/6 font-semibold text-gray-900">Company</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.company.map((item) => (
-                    <li key={item.name}>
-                      <a href={item.href} className="text-sm/6 text-gray-600 hover:text-gray-900">
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm/6 font-semibold text-gray-900">Legal</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.legal.map((item) => (
-                    <li key={item.name}>
-                      <a href={item.href} className="text-sm/6 text-gray-600 hover:text-gray-900">
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+
+            <div>
+              <h3 className="text-lg/6 font-bold text-primary-teal">About</h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {navigation.about.map((item) => (
+                  <li key={item.name}>
+                    <a href={item.href} className="text-md/6 text-gray-600 hover:text-gray-900">
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg/6 font-bold text-primary-teal">Company</h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {navigation.company.map((item) => (
+                  <li key={item.name}>
+                    <a href={item.href} className="text-md/6 text-gray-600 hover:text-gray-900">
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
-        <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24 lg:flex lg:items-center lg:justify-between">
-          <div>
-            <h3 className="text-sm/6 font-semibold text-gray-900">Subscribe to our newsletter</h3>
-            <p className="mt-2 text-sm/6 text-gray-600">
-              The latest news, articles, and resources, sent to your inbox weekly.
-            </p>
-          </div>
-          <form className="mt-6 sm:flex sm:max-w-md lg:mt-0">
-            <label htmlFor="email-address" className="sr-only">
-              Email address
-            </label>
-            <input
-              id="email-address"
-              name="email-address"
-              type="email"
-              required
-              placeholder="Enter your email"
-              autoComplete="email"
-              className="w-full min-w-0 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:w-56 sm:text-sm/6"
-            />
-            <div className="mt-4 sm:ml-4 sm:mt-0 sm:shrink-0">
-              <button
-                type="submit"
-                className="flex w-full items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Subscribe
-              </button>
-            </div>
-          </form>
-        </div>
+
         <div className="mt-8 border-t border-gray-900/10 pt-8 md:flex md:items-center md:justify-between">
-          {/* <div className="flex gap-x-6 md:order-2">
-            {navigation.social.map((item) => (
-              <a key={item.name} href={item.href} className="text-gray-600 hover:text-gray-800">
-                <span className="sr-only">{item.name}</span>
-                <item.icon aria-hidden="true" className="size-6" />
-              </a>
-            ))}
-          </div> */}
+
           <p className="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0">
-            &copy; 2024 Your Company, Inc. All rights reserved.
+            &copy; {new Date().getFullYear()} {config.name.name}, Inc. All rights reserved.
           </p>
         </div>
       </div>

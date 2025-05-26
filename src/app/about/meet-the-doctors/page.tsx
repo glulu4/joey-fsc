@@ -1,6 +1,7 @@
 import CTA from '@/components/CTA'
 import BodyText from '@/components/ui/BodyText'
 import HeaderText from '@/components/ui/HeaderText'
+import Image from 'next/image'
 import React from 'react'
 import {RoughNotation} from 'react-rough-notation'
 
@@ -27,10 +28,11 @@ const doctors = [
 
 export default function page() {
   return (
-    <div className='flex flex-col items-center justify-center pt-52'>
+      <div className='flex flex-col items-center justify-center pt-40 w-3/4 mx-auto'>
 
-        <div className='flex flex-col items-center justify-center gap-4 mb-20'>
-            <HeaderText>
+    
+          <div className='flex flex-col items-center justify-center gap-4 mb-20  text-center'>
+            <HeaderText className='text-gray-950 font-semibold'>
                 Meet Our {" "}
                   <RoughNotation multiline type="underline" show={true} color='#FEB7B1' animationDuration={1000} iterations={1} padding={1} strokeWidth={8}>
                       <span>
@@ -41,7 +43,7 @@ export default function page() {
   
             </HeaderText>
 
-            <BodyText className='text-center text-gray-400 max-w-2xl'>
+            <BodyText className='text-center text-gray-600 max-w-3xl'>
                 Our team of experienced doctors is dedicated to providing you with  
                 the highest quality of care. With a focus on patient comfort and advanced techniques, we strive to make your dental experience as pleasant as possible.
             </BodyText>
@@ -54,7 +56,11 @@ export default function page() {
           >
               {doctors.map((person) => (
                   <li key={person.name} className="rounded-2xl bg-white px-8 py-10">
-                      <img alt="" src={person.imageUrl} className="ring-4 ring-white shadow-lg mx-auto size-30 rounded-full md:size-72" />
+                      <Image 
+                      alt='Facial Surgery Center'
+                        width={208}
+                        height={260}
+                       src={person.imageUrl} className="ring-4 ring-white shadow-lg mx-auto size-30 rounded-full md:size-72" />
                       
                       <div className='text-center'>
                           <h3 className="mt-6 text-base/7 font-semibold tracking-tight text-black">

@@ -1,3 +1,4 @@
+import OurValues from '@/components/about/OurValues'
 import CTA from '@/components/CTA'
 import Location from '@/components/landing/Location'
 import MapCard from '@/components/service/MapCard'
@@ -30,6 +31,11 @@ export default function page() {
           description='lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
           imageSrc='/images/about/about-fsc-icon.png'
         />
+      </div>
+
+
+      <div className='mt-52'>
+        <OurValues />
       </div>
 
       <div className="container">

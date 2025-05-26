@@ -2,7 +2,7 @@
 import { config } from "@/config";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter, Manrope, Flamenco, Kalnia, Playfair_Display, Noto_Serif, Inria_Serif, Nunito, Alegreya, Lora } from "next/font/google";
+import {Inter, Manrope, Flamenco, Kalnia, Noto_Serif_Balinese, Playfair_Display, Noto_Serif, Inria_Serif, Nunito, Alegreya, Lora, Bitter, Libre_Caslon_Display, Noto_Sans_Georgian, PT_Serif, Solway, Prata, Literata } from "next/font/google";
 import "./globals.css";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -12,11 +12,11 @@ import Providers from "@/components/theme-provider";
 
 const fontSans = Nunito({ subsets: ["latin"], variable: "--font-sans" });
 
-const fontSerif = Lora({
+const fontSerif = Literata({
   subsets: ["latin"],
   variable: "--font-serif",
   display: "swap",
-  weight: ["400", "500", "600", "700",],
+  weight: [ "400", ],
 });
 
 export const metadata: Metadata = {

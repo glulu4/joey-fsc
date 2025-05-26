@@ -36,6 +36,18 @@ export const services: {
         "para2Img": "/images/services/tooth-replacement.png",
         "serviceTitle2": "Why Remove Wisdom Teeth?"
     },
+    "bone-grafting": {
+        "serviceTitle": "Bone Grafting",
+        "description": "Restoring bone structure to support dental implants or reconstructive procedures.",
+        "coverImg": "/images/services/bone-graft.png",
+        "para1Title": "Why Bone Grafting is Needed",
+        "para1Text": "Bone grafting is often necessary when there is insufficient bone density to support dental implants or other restorative procedures. This can occur due to tooth loss, trauma, or periodontal disease.",
+        "para1Img": "/images/services/bone-graft-procedure.png",
+        "para2Title": "Types of Bone Grafts",
+        "para2Text": "We offer various bone grafting techniques, including autografts (using your own bone), allografts (donor bone), and synthetic materials. The choice depends on your specific needs and treatment goals.",
+        "para2Img": "/images/services/bone-graft-types.png",
+        "serviceTitle2": "Why Remove Wisdom Teeth?"
+    },
     "dental-implants": {
         "serviceTitle": "Dental Implants",
         "description": "Permanent solutions for missing teeth, restoring function and aesthetics with durable implants.",

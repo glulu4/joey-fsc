@@ -1,5 +1,6 @@
 import React from 'react';
 import {CheckCircle, FileText, MessageCircle, Calendar} from 'lucide-react';
+import HeaderText from '../ui/HeaderText';
 
 interface StepCardProps {
     step: number;
@@ -49,7 +50,7 @@ export default function AppointmentSteps() {
             content: (
                 <div className="space-y-4">
                     <p className="leading-relaxed">
-                        Whether you have a referral from your doctor or are visiting us directly, we'll start by getting to know you and your oral health history. You'll fill out a comprehensive registration form covering:
+                        Whether you have a referral from your doctor or are visiting us directly, we&apos;ll start by getting to know you and your oral health history. You&apos;ll fill out a comprehensive registration form covering:
                     </p>
                     <ul className="space-y-2 ml-4">
                         <li className="flex items-start">
@@ -66,7 +67,7 @@ export default function AppointmentSteps() {
                         </li>
                     </ul>
                     <p className="leading-relaxed">
-                        If needed, we'll take diagnostic imaging like X-rays or CT scans right here in our office to get a complete picture of your oral health.
+                        If needed, we&apos;ll take diagnostic imaging like X-rays or CT scans right here in our office to get a complete picture of your oral health.
                     </p>
                 </div>
             )
@@ -95,7 +96,7 @@ export default function AppointmentSteps() {
             content: (
                 <div className="space-y-4">
                     <p className="leading-relaxed">
-                        Now comes the collaborative part! We'll present your treatment options and work together to find the best path forward. We'll cover:
+                        Now comes the collaborative part! We&apos;ll present your treatment options and work together to find the best path forward. We&apos;ll cover:
                     </p>
                     <div className="grid md:grid-cols-2 gap-4">
                         <div className="space-y-2">
@@ -116,7 +117,7 @@ export default function AppointmentSteps() {
                         </div>
                     </div>
                     <p className="leading-relaxed">
-                        Once we agree on the best plan, we'll handle all the paperwork and insurance details, discuss costs, and get everything scheduled.
+                        Once we agree on the best plan, we&apos;ll handle all the paperwork and insurance details, discuss costs, and get everything scheduled.
                     </p>
                 </div>
             )
@@ -150,12 +151,12 @@ export default function AppointmentSteps() {
             <div className="max-w-5xl mx-auto px-6">
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    <HeaderText className="font-semibold text-gray-900 mb-6">
                         What to Expect During Your Visit
-                    </h2>
+                    </HeaderText>
                     <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                        Our commitment to exceptional care means you'll work with the most qualified Oral and Maxillofacial Surgeons.
-                        Here's what you can expect during your visit with us.
+                        Our commitment to exceptional care means you&apos;ll work with the most qualified Oral and Maxillofacial Surgeons.
+                        Here&apos;s what you can expect during your visit with us.
                     </p>
                 </div>
 

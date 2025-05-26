@@ -79,6 +79,7 @@ import clsx from "clsx";
 import React from "react";
 import HeaderText from "../ui/HeaderText";
 import BodyText from "../ui/BodyText";
+import Image from "next/image";
 
 interface MapCardProps {
     title: string;
@@ -130,7 +131,9 @@ export default function MapCard({
                     "bg-white"
                 )}
             >
-                <img
+                <Image
+                    width={500}   
+                    height={500}
                     src={imageSrc}
                     alt="Tastebud Map Illustration"
                     className="object-scale-down w-full h-full"
