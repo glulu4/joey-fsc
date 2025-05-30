@@ -29,7 +29,7 @@ export default function CTA() {
   return (
     <div className='flex flex-col items-center justify-center py-32'>
 
-        <div className='flex flex-col items-center justify-center w-3/4 mx-auto text-center space-y-8'>
+      <div className='flex flex-col items-center justify-center w-10/12 sm:w-3/5 mx-auto text-center space-y-8'>
             <HeaderText className='text-header-text font-serif font-medium'>
 
               <span className=''>

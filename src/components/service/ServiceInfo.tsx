@@ -38,8 +38,8 @@ export default function ServiceInfo({
                     <RoughNotation type="highlight" show={true} color="#FBBFCA" animationDuration={1000} iterations={1} padding={10} strokeWidth={4} >
 
                         <HeaderText className='text-header-text font-serif font-medium'>
-                        {title1}
-                    </HeaderText>
+                            {title1}
+                        </HeaderText>
                     </RoughNotation>
                     <BodyText className='text-body-text max-w-2xl'>
                         {description1}
@@ -59,7 +59,7 @@ export default function ServiceInfo({
 
             {/* Second Row - Reversed on large screens */}
             <div className='flex flex-col lg:flex-row-reverse items-center justify-around w-full gap-8 '>
-                <div className='flex flex-col items-end gap-8 text-right'>
+                <div className='flex flex-col items-start sm:items-end gap-8 text-right'>
                     <RoughNotation multiline type="box" show={true} color='orange' animationDuration={1000} iterations={1} padding={10} strokeWidth={4} >
                         <HeaderText className='text-header-text font-serif font-medium'>
                             {title2}
@@ -67,9 +67,9 @@ export default function ServiceInfo({
                     </RoughNotation>
 
 
-                    <BodyText className='text-body-text  max-w-2xl'>
+                    <BodyText className='text-body-text text-left sm:text-right max-w-2xl'>
                         {description2}
-                        </BodyText>
+                    </BodyText>
                 </div>
 
                 <div>

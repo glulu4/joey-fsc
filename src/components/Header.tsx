@@ -295,18 +295,18 @@ export const Navigation: FunctionComponent = () => {
                       className="flex items-center space-x-3 py-2 px-4 rounded-lg hover:bg-white/10 transition-colors duration-200"
                     >
                       <Phone className="text-primaryCyan"  size="18" />
-                      <span>(267) 497-3183</span>
+                      <span>(215)-313-6906</span>
                     </a>
                     <a
                       href="mailto:sales@paragonexterior.com"
                       className="flex items-center space-x-3 py-2 px-4 rounded-lg hover:bg-white/10 transition-colors duration-200"
                     >
                       <Mail className="text-primaryOrange" size="18" />
-                      <span>sales@paragonexterior.com</span>
+                      <span>contact@fsc.com</span>
                     </a>
                     <div className="flex items-center space-x-3 py-2 px-4">
                       <MapPin className="text-red-700" size="18" />
-                      <span>Feasterville-Trevose, PA</span>
+                      <span>Trumbull, CT</span>
                     </div>
                   </div>
                 </div>

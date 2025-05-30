@@ -20,7 +20,7 @@ export default function ServiceHero({
 }:ServiceHeroProps) {
   return (
     <div className={clsx(
-        'bg-primaryCyan/20 w-full h-full  rounded-[48px] flex flex-col items-center justify-center',
+        'bg-primaryCyan/20 w-full h-full rounded-[48px] flex flex-col items-center justify-center',
         "sm:flex-row sm:justify-between sm:items-center",
         "p-10 px-20",
         "shadow-md",

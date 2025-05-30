@@ -1,6 +1,8 @@
 "use client";
 
 import TextInput from '@/components/TextInput';
+import BodyText from '@/components/ui/BodyText';
+import HeaderText from '@/components/ui/HeaderText';
 import clsx from 'clsx';
 import React, {useState} from 'react';
 // import Confetti from 'react-confetti-boom';
@@ -96,13 +98,13 @@ export default function Page() {
             )} */}
             <main className="flex-1 ">
                 <div>
-                    <h1 className="text-3xl sm:text-4xl text-primaryGreenDark font-bold text-center pt-10 md:pt-24">
+                    <HeaderText className="text-header-text font-medium font-serif text-center pt-10 md:pt-24">
                         Contact Us
-                    </h1>
+                    </HeaderText>
 
-                    <p className="mt-4 text-center text-lg font-semibold text-primaryGreenDark max-w-3xl mx-auto  py-8">
+                    <BodyText className="mt-4 text-center text-body-text max-w-3xl mx-auto py-8">
                         Someone from our team will get back to you as soon as possible. Please fill out the form below and we will reach out to you shortly.
-                    </p>
+                    </BodyText>
 
                     <div className="mt-10 w-full max-w-3xl mx-auto px-4">
 
