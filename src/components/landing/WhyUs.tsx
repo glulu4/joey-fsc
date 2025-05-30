@@ -2,7 +2,8 @@
 import {DotLottieReact} from "@lottiefiles/dotlottie-react"
 import HeaderText from "../ui/HeaderText"
 import BodyText from "../ui/BodyText"
-import { Stethoscope, HandHelping, SmileIcon} from "lucide-react"
+import { HandHelping, SmileIcon} from "lucide-react"
+import {UserRectangle, Stethoscope} from "@phosphor-icons/react";
 
 const incentives = [
     {
@@ -19,7 +20,7 @@ const incentives = [
     },
     {
         name: 'Natural-Looking Results',
-        Icon: SmileIcon,
+        Icon: UserRectangle,
         description: "From subtle enhancements to transformative surgeries, our focus is always on balanced, natural-looking outcomes.",
         color: 'text-primaryOrange',
     },
