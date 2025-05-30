@@ -66,6 +66,7 @@ import HeaderText from '../ui/HeaderText'
 import clsx from 'clsx'
 import {Service, services} from '../../../public/services';
 import Image from 'next/image';
+import BodyText from '../ui/BodyText';
 
 interface LearnMoreProps {
     service1Idx: number;
@@ -90,18 +91,18 @@ export default function LearnMore({
 
     return (
         <section className={clsx(
-            'bg-gradient-to-br from-slate-50 to-blue-50 py-20',
+            'bg-gradient-to-br from-gray-50 to-blue-50 py-20',
             className
         )}>
             <div className='container mx-auto px-4'>
                 {/* Header */}
                 <div className='text-center mb-16'>
-                    <HeaderText className='text-4xl md:text-5xl font-bold text-gray-900 mb-4'>
+                    <HeaderText className='font-serif font-medium text-header-text mb-4'>
                         Explore More Services
                     </HeaderText>
-                    <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
+                    <BodyText className='text-xl text-gray-600 max-w-2xl mx-auto'>
                         Discover other specialized treatments we offer to meet your oral health needs
-                    </p>
+                    </BodyText>
                 </div>
 
                 {/* Services Grid */}
@@ -136,11 +137,11 @@ export default function LearnMore({
 
                                 {/* Content */}
                                 <div className='p-8 lg:p-10'>
-                                    <HeaderText className='text-2xl lg:text-3xl font-bold text-gray-900 mb-4  transition-colors duration-300'>
+                                    <HeaderText variant='small' className='font-medium font-serif text-header-text mb-4 transition-colors duration-300'>
                                         {service.serviceTitle}
                                     </HeaderText>
 
-                                    <p className='text-gray-600 text-lg leading-relaxed mb-8'>
+                                    <p className='text-body-text text-lg leading-relaxed mb-8'>
                                         {service.description}
                                     </p>
 

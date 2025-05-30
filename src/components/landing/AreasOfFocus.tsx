@@ -18,8 +18,8 @@ export default function AreasOfFocus({ className }: AreasOfFocusProps) {
       <div className='mx-auto max-w-3xl'>
 
 
-            <HeaderText className='text-center mb-12 font-medium font-serif text-gray-950'>
-            <RoughNotation multiline type="underline" show={true} color='#ff8e1d' animationDuration={1000} iterations={1} padding={1} strokeWidth={8}>
+          <HeaderText variant="default" className="text-header-text mb-12 text-center font-serif font-medium">
+          <RoughNotation multiline type="underline" show={true} color='#CE8490' animationDuration={1000} iterations={1} padding={1} strokeWidth={8}>
 
               Areas We Treat
           </RoughNotation>
@@ -29,7 +29,7 @@ export default function AreasOfFocus({ className }: AreasOfFocusProps) {
 
 
 
-        <BodyText className='text-center mt-4'>
+        <BodyText className='text-center text-body-text mt-4'>
           At Facial Surgery Center, we specialize in a wide range of surgical and non-surgical procedures to enhance your facial aesthetics. Our areas of focus include:
         </BodyText>
 

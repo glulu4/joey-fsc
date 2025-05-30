@@ -30,12 +30,12 @@ const Page = () => {
         <Team />
       </div> */}
 
-      <div className="py-32 bg-bg3 flex flex-col items-center justify-center">
+      <div className="py-32 bg-[#F2F3F1] flex flex-col items-center justify-center">
         <HorizontalSlider />
       </div>
 
 
-      <div className="container">
+      <div className="container pt-16">
         <Location />
       </div>
 

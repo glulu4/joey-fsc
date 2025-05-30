@@ -32,7 +32,7 @@ export default function page() {
 
     
           <div className='flex flex-col items-center justify-center gap-4 mb-20  text-center'>
-            <HeaderText className='text-gray-950 font-semibold'>
+            <HeaderText className='text-header-text font-serif font-medium'>
                 Meet Our {" "}
                   <RoughNotation multiline type="underline" show={true} color='#FEB7B1' animationDuration={1000} iterations={1} padding={1} strokeWidth={8}>
                       <span>
@@ -43,7 +43,7 @@ export default function page() {
   
             </HeaderText>
 
-            <BodyText className='text-center text-gray-600 max-w-3xl'>
+            <BodyText className='text-center text-body-text max-w-3xl'>
                 Our team of experienced doctors is dedicated to providing you with  
                 the highest quality of care. With a focus on patient comfort and advanced techniques, we strive to make your dental experience as pleasant as possible.
             </BodyText>
@@ -55,7 +55,7 @@ export default function page() {
               className="mx-auto mt-20 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-0 lg:grid-cols-2 lg:gap-8"
           >
               {doctors.map((person) => (
-                  <li key={person.name} className="rounded-2xl bg-white px-8 py-10">
+                  <li key={person.name} className="rounded-2xl bg-bg2 px-8 py-10">
                       <Image 
                       alt='Facial Surgery Center'
                         width={208}
@@ -63,14 +63,14 @@ export default function page() {
                        src={person.imageUrl} className="ring-4 ring-white shadow-lg mx-auto size-30 rounded-full md:size-72" />
                       
                       <div className='text-center'>
-                          <h3 className="mt-6 text-base/7 font-semibold tracking-tight text-black">
+                          <HeaderText variant='small' className="mt-6 font-medium tracking-tight text-header-text font-serif pb-6">
                               {person.name}
-                          </h3>
-                          <BodyText className="text-sm/6 text-gray-800">
+                          </HeaderText>
+                          {/* <BodyText className="text-sm/6 text-gray-800">
                           {person.role}
-                          </BodyText>
+                          </BodyText> */}
 
-                          <BodyText variant='small' className='text-gray-600'>
+                          <BodyText variant='small' className='text-body-text'>
                                 {person.bio}
                           </BodyText>
 

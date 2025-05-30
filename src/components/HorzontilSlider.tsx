@@ -117,7 +117,7 @@ export default function HorizontalSlider() {
         <div className="flex flex-col items-center w-full px-4">
 
             <div className="flex flex-row items-center justify-between w-full ">
-                <HeaderText className="font-medium font-serif text-gray-950 px-6">
+                <HeaderText className="font-medium text-header-text mb-12 font-serif px-6">
                     Services We Offer
                 </HeaderText>
                 <div className="flex items-center gap-4">
@@ -153,10 +153,10 @@ export default function HorizontalSlider() {
                         }}
                     >
                         <div className="self-start text-left w-3/4 space-y-6">
-                            <HeaderText variant="small" className="text-gray-950" >
+                            <HeaderText variant="small" className="text-header-text mb-12 font-serif" >
                                {item.name}
                             </HeaderText>          
-                            <BodyText className="text-gray-600 ">
+                            <BodyText className="text-body-text ">
                                 Lorem ipsum dolor sit amet,
                                 consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </BodyText>

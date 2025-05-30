@@ -37,7 +37,7 @@ const config = {
         // background: "#fffbeb",
         background:"#fff9f4",
         bg2:"#fbe8d9",
-        bg3:"#fbe8d9",
+        bg3:"#fbe8d8",
 
         foreground: "hsl(var(--foreground))",
         // primaryBlue: '#0087FF',
@@ -48,7 +48,17 @@ const config = {
         // primaryGreen: '#00CE00',
 
         primaryCyan: '#69d1e3',
-        "primary-teal": "#005D64"
+        "primary-teal": "#005D64",
+
+
+        // "header-text": '#183c3c',
+        "header-text": '#2c3639',
+
+
+        "body-text":'#33312E',
+        "body-text-light": '#4A4745',
+
+        "misty-blue": "#F2F3F1",
         
 
         // Secondary Blues

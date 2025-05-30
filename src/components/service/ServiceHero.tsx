@@ -20,18 +20,18 @@ export default function ServiceHero({
 }:ServiceHeroProps) {
   return (
     <div className={clsx(
-        'bg-primaryCyan/30 w-full h-full  rounded-[48px] flex flex-col items-center justify-center',
+        'bg-primaryCyan/20 w-full h-full  rounded-[48px] flex flex-col items-center justify-center',
         "sm:flex-row sm:justify-between sm:items-center",
         "p-10 px-20",
         "shadow-md",
         )}>
 
         <div className='max-w-xl h-full flex flex-col items-start justify-between space-y-5'>
-            <HeaderText variant='large'>
+            <HeaderText variant='large' className='text-header-text font-serif font-medium'>
                 {title}
             </HeaderText>
 
-            <BodyText>
+            <BodyText className='text-body-text-light'>
                 {description}
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Doloremque, aliquid. Error veniam dolore quibusdam consequuntur aspernatur sunt impedit repellendus consequatur 

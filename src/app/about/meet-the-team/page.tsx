@@ -130,12 +130,12 @@ export default function page() {
         <div className="py-44">
             <div className="mx-auto max-w-4xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl sm:text-center sm:mt-10">
-                    <HeaderText className="text-gray-950 font-semibold text-center">
+                    <HeaderText className="text-header-text font-serif font-medium text-center">
                         <RoughNotation multiline type="underline" show={true} color='#FFBA01' animationDuration={1000} iterations={1} padding={1} strokeWidth={8}>
                             Meet Our Team
                         </RoughNotation>
                     </HeaderText>
-                    <BodyText className="mt-6 text-gray-600 text-center">
+                    <BodyText className="mt-6 text-body-text text-center">
                         The team that makes Facial Surgery Center exceptional.
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eligendi in quasi facilis pariatur veniam accusantium debitis, ut molestiae! Ratione voluptas maiores repellat consequatur. Molestias facilis cumque ut vel qui?
                     </BodyText>
@@ -161,11 +161,11 @@ export default function page() {
 
                             {/* Text */}
                             <div className="flex-1">
-                                <h3 className="text-blue-950 font-serif text-2xl font-bold">
+                                <HeaderText variant='small' className="text-header-text font-serif font-medium">
                                     {person.name}
-                                </h3>
-                                <p className="text-gray-600 text-base font-medium">{person.role}</p>
-                                <p className="mt-4 text-gray-600 text-base leading-relaxed">
+                                </HeaderText>
+                                <p className="text-body-text-light text-base font-medium">{person.role}</p>
+                                <p className="mt-4 text-body-text text-base leading-relaxed">
                                     {person.bio}
                                 </p>
                             </div>

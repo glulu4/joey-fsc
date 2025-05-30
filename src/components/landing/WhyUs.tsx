@@ -27,16 +27,16 @@ const incentives = [
 
 export default function WhyUs() {
     return (
-        <div className="py-16 bg-bg2 ">
+        <div className="py-16 bg-bg2"> 
             <div className="mx-auto max-w-7xl py-24 sm:px-2 sm:py-32 lg:px-4">
                 <div className="mx-auto max-w-2xl px-4 lg:max-w-none">
                     {/* <div className="grid grid-cols-1 items-center justify-center gap-x-16 gap-y-10 lg:grid-cols-2"> */}
                     <div className="text-center w-3/4 mx-auto">
                         <div className="self-center">
-                            <HeaderText variant="default" className="text-gray-950 font-medium font-serif">
+          <HeaderText variant="default" className="text-header-text font-serif font-normal">
                                 Why Patients Choose Facial Surgery Center
                             </HeaderText>
-                            <BodyText className="mt-8 text-gray-500">
+                            <BodyText className="mt-8 text-body-text">
                                 At Facial Surgery Center, we’re committed to excellence at every step. From your first consultation to final results, our team is focused on safety, artistry, and compassionate care.
                             </BodyText>
                         </div>
@@ -55,7 +55,7 @@ export default function WhyUs() {
                                     <BodyText variant="default" className=" font-serif text-gray-900">
                                         {incentive.name}
                                     </BodyText>
-                                    <BodyText variant="small" className="mt-2 text-gray-500">
+                                    <BodyText variant="small" className="mt-2 text-body-text">
                                         {incentive.description}
                                     </BodyText>
                                 </div>

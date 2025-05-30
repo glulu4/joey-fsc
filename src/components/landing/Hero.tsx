@@ -167,8 +167,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         <div className="">
             {/* Headline */}
             <div className="text-center sm:w-2/4 mx-auto">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium text-gray-900 leading-tight">
-                    Facial Surgery Center
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium text-header-text leading-tight">
+                    <span className='font-serif'>Facial Surgery Center</span>
+                    
                     <br />
                     <span className="font-light font-sans">Transform Your Confidence with a </span>
                     <span className="text-primaryYellow">{highlight}</span>

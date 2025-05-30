@@ -1,6 +1,7 @@
 import React from 'react';
 import {CheckCircle, FileText, MessageCircle, Calendar} from 'lucide-react';
 import HeaderText from '../ui/HeaderText';
+import BodyText from '../ui/BodyText';
 
 interface StepCardProps {
     step: number;
@@ -22,7 +23,7 @@ const StepCard = ({step, icon: Icon, title, content, isLast = false}: StepCardPr
                         <span className="bg-primary-teal text-white text-sm font-semibold px-3 py-1 rounded-full mr-3">
                             STEP {step}
                         </span>
-                        <h3 className="text-2xl font-bold text-gray-800">{title}</h3>
+                        <HeaderText variant='small' className="text-header-text font-serif font-medium ">{title}</HeaderText>
                     </div>
 
                     {/* <div className="   sm:flex-shrink-0 sm:flex sm:flex-col sm:items-center">
@@ -33,7 +34,7 @@ const StepCard = ({step, icon: Icon, title, content, isLast = false}: StepCardPr
 
                 </div>
 
-                <div className="text-gray-600 space-y-4">
+                <div className="text-body-text-light space-y-4">
                     {content}
                 </div>
             </div>
@@ -151,13 +152,13 @@ export default function AppointmentSteps() {
             <div className="max-w-5xl mx-auto px-6">
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <HeaderText className="font-semibold text-gray-900 mb-6">
+                    <HeaderText className="font-medium font-serif text-header-text  mb-6">
                         What to Expect During Your Visit
                     </HeaderText>
-                    <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                    <BodyText className=" text-body-text leading-relaxed max-w-3xl mx-auto">
                         Our commitment to exceptional care means you&apos;ll work with the most qualified Oral and Maxillofacial Surgeons.
                         Here&apos;s what you can expect during your visit with us.
-                    </p>
+                    </BodyText>
                 </div>
 
                 {/* Steps */}

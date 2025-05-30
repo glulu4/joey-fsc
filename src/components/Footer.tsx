@@ -105,11 +105,11 @@ export const Footer: FunctionComponent = () => {
           />
           <div className="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3 xl:col-span-2 xl:mt-0">
             <div>
-              <h3 className="text-lg/6 font-bold text-primary-teal">For Patients</h3>
+              <h3 className="text-lg/6 font-medium font-serif text-header-text">For Patients</h3>
               <ul role="list" className="mt-6 space-y-4">
                 {navigation.forPatients.map((item) => (
                   <li key={item.name}>
-                    <a href={item.href} className="text-md/6 text-gray-600 hover:text-gray-900">
+                    <a href={item.href} className="text-md/6 text-body-text hover:text-gray-900">
                       {item.name}
                     </a>
                   </li>
@@ -118,11 +118,11 @@ export const Footer: FunctionComponent = () => {
             </div>
 
             <div>
-              <h3 className="text-lg/6 font-bold text-primary-teal">About</h3>
+              <h3 className="text-lg/6 font-medium font-serif text-header-text">About</h3>
               <ul role="list" className="mt-6 space-y-4">
                 {navigation.about.map((item) => (
                   <li key={item.name}>
-                    <a href={item.href} className="text-md/6 text-gray-600 hover:text-gray-900">
+                    <a href={item.href} className="text-md/6 text-body-text hover:text-gray-900">
                       {item.name}
                     </a>
                   </li>
@@ -131,11 +131,11 @@ export const Footer: FunctionComponent = () => {
             </div>
 
             <div>
-              <h3 className="text-lg/6 font-bold text-primary-teal">Company</h3>
+              <h3 className="text-lg/6 font-medium font-serif text-header-text">Company</h3>
               <ul role="list" className="mt-6 space-y-4">
                 {navigation.company.map((item) => (
                   <li key={item.name}>
-                    <a href={item.href} className="text-md/6 text-gray-600 hover:text-gray-900">
+                    <a href={item.href} className="text-md/6 text-body-text hover:text-gray-900">
                       {item.name}
                     </a>
                   </li>
@@ -147,7 +147,7 @@ export const Footer: FunctionComponent = () => {
 
         <div className="mt-8 border-t border-gray-900/10 pt-8 md:flex md:items-center md:justify-between">
 
-          <p className="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0">
+          <p className="mt-8 text-sm/6 text-body-text md:order-1 md:mt-0">
             &copy; {new Date().getFullYear()} {config.name.name}, Inc. All rights reserved.
           </p>
         </div>

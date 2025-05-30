@@ -30,7 +30,7 @@ export default function CTA() {
     <div className='flex flex-col items-center justify-center py-32'>
 
         <div className='flex flex-col items-center justify-center w-3/4 mx-auto text-center space-y-8'>
-            <HeaderText className='text-gray-950 font-semibold'>
+            <HeaderText className='text-header-text font-serif font-medium'>
 
               <span className=''>
             Schedule Your {' '}
@@ -38,10 +38,10 @@ export default function CTA() {
               </span>
                 
           <RoughNotation 
-           type="circle" show={true} color='#69d9e3' animationDuration={1000} iterations={1} padding={padding} strokeWidth={strokeWidth}>
+           type="underline" show={true} color='#69d9e3' animationDuration={1000} iterations={1} padding={2} strokeWidth={strokeWidth}>
                       Consultation 
                 </RoughNotation>
-                Today
+          {' '}Today
             </HeaderText>
             <BodyText>
                 We are here to help you with all  

@@ -7,6 +7,7 @@ import Row from '@/components/ui/Row';
 import Schedule from '@/components/Schedule';
 import ServiceInfo from '@/components/service/ServiceInfo';
 import LearnMore from '@/components/service/LearnMore';
+import CTA from '@/components/CTA';
 
 
 export default async function page({
@@ -77,9 +78,9 @@ export default async function page({
     </div>
 
 
-      <div className='py-28 p-8'>
+      {/* <div className='py-28 p-8'>
         <Schedule />
-      </div>
+      </div> */}
 
       <div>
 
@@ -91,6 +92,10 @@ export default async function page({
 
       </div>
 
+
+        <div>
+          <CTA/>
+        </div>
       {/* <MapCard
         title={serviceData.name}
         description={serviceData.description}

@@ -99,7 +99,7 @@ export default function Testimonial() {
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl text-center">
                     {/* <h2 className="text-base/7 font-semibold text-indigo-600">Testimonials</h2> */}
-                    <HeaderText className="mt-2 font-semibold text-balance text-gray-900 ">
+                    <HeaderText className="mt-2 font-medium text-balance text-header-text font-serif">
                         What our clients say
                     </HeaderText>
                 </div>

@@ -28,20 +28,20 @@ export default function ServiceInfo({
 }: ServiceInfoProps) {
     return (
         <div className='flex flex-col items-center justify-center container space-y-12 p-4 py-12'>
-            <HeaderText className='font-bold text-gray-950'>
+            <HeaderText className='text-header-text font-serif font-medium'>
                 {infoHeader}
             </HeaderText>
 
             {/* First Row */}
             <div className='flex flex-col-reverse lg:flex-row items-center justify-around w-full gap-8'>
                 <div className='flex flex-col items-start  gap-8 text-left'>
-                    <RoughNotation multiline type="circle" show={true} color='pink' animationDuration={1000} iterations={1} padding={10} strokeWidth={4} >
+                    <RoughNotation type="highlight" show={true} color="#FBBFCA" animationDuration={1000} iterations={1} padding={10} strokeWidth={4} >
 
-                    <HeaderText>
+                        <HeaderText className='text-header-text font-serif font-medium'>
                         {title1}
                     </HeaderText>
                     </RoughNotation>
-                    <BodyText className='text-gray-600 max-w-2xl'>
+                    <BodyText className='text-body-text max-w-2xl'>
                         {description1}
                     </BodyText>
                 </div>
@@ -60,14 +60,14 @@ export default function ServiceInfo({
             {/* Second Row - Reversed on large screens */}
             <div className='flex flex-col lg:flex-row-reverse items-center justify-around w-full gap-8 '>
                 <div className='flex flex-col items-end gap-8 text-right'>
-                    <RoughNotation multiline type="circle" show={true} color='orange' animationDuration={1000} iterations={1} padding={10} strokeWidth={4} >
-                        <HeaderText>
+                    <RoughNotation multiline type="box" show={true} color='orange' animationDuration={1000} iterations={1} padding={10} strokeWidth={4} >
+                        <HeaderText className='text-header-text font-serif font-medium'>
                             {title2}
                         </HeaderText>
                     </RoughNotation>
 
 
-                    <BodyText  className='text-gray-600 max-w-2xl'>
+                    <BodyText className='text-body-text  max-w-2xl'>
                         {description2}
                         </BodyText>
                 </div>

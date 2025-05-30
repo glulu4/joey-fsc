@@ -4,6 +4,8 @@ import Image from 'next/image'
 import HeaderText from '../ui/HeaderText'
 import BodyText from '../ui/BodyText'
 
+// #183c3c
+// #a27b5c
 export default function Location() {
   return (
     <div className="h-svh">
@@ -11,11 +13,11 @@ export default function Location() {
       <div className='flex flex-col sm:flex-row flex-1 items-center justify-center py-24 h-full'>
 
         <div className='flex flex-[0.45] w-full h-full flex-col justify-center items-center gap-10'>
-          <HeaderText variant="default" className="text-gray-950 font-semibold">
+          <HeaderText variant="default" className="text-header-text font-serif font-medium">
 
             Proudly Serving the Connecticut Community
           </HeaderText>
-          <BodyText>
+          <BodyText className='text-body-text'>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla deleniti distinctio officiis veritatis laborum suscipit totam ipsum officia, quis optio, quasi numquam, a ipsa. Asperiores, deleniti. Vero earum odit est.
           </BodyText>
         </div>
