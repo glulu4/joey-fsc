@@ -19,14 +19,41 @@ const fontSerif = Literata({
   weight: [ "400", ],
 });
 
-export const metadata: Metadata = {
-  title: {
-    absolute: config.name.metadata.title.absolute,
-    default: config.name.metadata.title.default,
-    template: config.name.metadata.title.template,
-  },
-  description: config.name.metadata.description,
+// export const metadata: Metadata = {
+//   title: {
+//     absolute: config.name.metadata.title.absolute,
+//     default: config.name.metadata.title.default,
+//     template: config.name.metadata.title.template,
+//   },
+//   description: config.name.metadata.description,
 
+// };
+
+
+export const metadata: Metadata = {
+  title: config.name.metadata.title,
+  description: config.name.metadata.description,
+  openGraph: {
+    title: config.name.metadata.title,
+    description: config.name.metadata.description,
+    // url: config.name.metadata.url,
+    siteName: "Facial Surgery Center",
+    // images: [
+    //   {
+    //     url: `${config.name.metadata.url}/og-image.png`,
+    //     width: 1200,
+    //     height: 630,
+    //   },
+    // ],
+    locale: "en_US",
+    type: "website",
+  },
+  // twitter: {
+  //   card: "summary_large_image",
+  //   title: config.name.metadata.title,
+  //   description: config.name.metadata.description,
+  //   images: [`${config.name.metadata.url}/og-image.png`],
+  // },
 };
 
 export default function RootLayout({
