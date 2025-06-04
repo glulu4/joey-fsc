@@ -3,6 +3,7 @@ import HeaderText from '../ui/HeaderText'
 import Image from 'next/image'
 import BodyText from '../ui/BodyText'
 import {RoughNotation, RoughNotationGroup} from "react-rough-notation";
+import {SvgBlob} from 'react-svg-blob'
 
 
 interface ServiceInfoProps {
@@ -33,8 +34,8 @@ export default function ServiceInfo({
             </HeaderText>
 
             {/* First Row */}
-            <div className='flex flex-col-reverse lg:flex-row items-center justify-around w-full gap-8'>
-                <div className='flex flex-col items-start  gap-8 text-left'>
+            <div className='flex flex-col-reverse lg:flex-row items-center justify-around w-full gap-8 py-10'>
+                <div className='flex sm:w-1/2 flex-col items-start  gap-8 text-left'>
                     <RoughNotation type="highlight" show={true} color="#FBBFCA" animationDuration={1000} iterations={1} padding={10} strokeWidth={4} >
 
                         <HeaderText className='text-header-text font-serif font-medium'>
@@ -46,7 +47,7 @@ export default function ServiceInfo({
                     </BodyText>
                 </div>
 
-                <div className=''>
+                {/* <div className=''>
                     <Image
                         src={imageSrc1}
                         alt='Wisdom Teeth'
@@ -54,12 +55,36 @@ export default function ServiceInfo({
                         height={500}
                         className='object-cover'
                     />
+                </div> */}
+
+
+                <div className="relative">
+                    {/* <SvgBlob
+                        className=" absolute -top-28 -right-40 -z-10 overflow-hidden"
+                        color="#C8E7DB"
+                        variant="solid"
+                        // style={{width: '100%', height: '100%'}}
+                    /> */}
+                    <SvgBlob
+                        className="absolute  -top-40 -right-30 -z-10 overflow-hidden"
+                        color="#C8E7DB"
+                        variant="solid"
+                    />
+                    <Image
+                        src={imageSrc1}
+                        alt="Wisdom Teeth"
+                        width={500}
+                        height={500}
+                        className="object-cover relative z-10 rounded-xl"
+                    />
                 </div>
+
+
             </div>
 
             {/* Second Row - Reversed on large screens */}
-            <div className='flex flex-col lg:flex-row-reverse items-center justify-around w-full gap-8 '>
-                <div className='flex flex-col items-start sm:items-end gap-8 text-right'>
+            <div className='flex flex-col lg:flex-row-reverse items-center justify-around w-full gap-8 py-10'>
+                <div className='flex flex-col items-start text-left sm:w-1/2 sm:items-end gap-8 sm:text-right'>
                     <RoughNotation multiline type="box" show={true} color='orange' animationDuration={1000} iterations={1} padding={10} strokeWidth={4} >
                         <HeaderText className='text-header-text font-serif font-medium'>
                             {title2}
@@ -72,7 +97,7 @@ export default function ServiceInfo({
                     </BodyText>
                 </div>
 
-                <div>
+                {/* <div>
                     <Image
                         src={imageSrc2}
                         alt='Wisdom Teeth Removal'
@@ -80,7 +105,23 @@ export default function ServiceInfo({
                         height={500}
                         className='object-cover'
                     />
+                </div> */}
+
+                <div className='relative'>
+                    <SvgBlob
+                        className="absolute -top-28 -left-40 -z-10 overflow-hidden"
+                        color="lightblue"
+                        variant="solid"    
+                    />
+                    <Image
+                        src={imageSrc2}
+                        alt="Wisdom Teeth"
+                        width={500}
+                        height={500}
+                        className="object-cover z-10 rounded-xl"
+                    />
                 </div>
+
             </div>
         </div>
     )

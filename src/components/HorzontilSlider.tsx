@@ -168,7 +168,7 @@ export default function HorizontalSlider() {
                             height={200}
                             alt="App screenshot"
                             src={item.img}
-                            className="w-full h-full object-cover"
+                                className="sm:w-full sm:h-full object-cover"
                             priority
                             />
                         </div>

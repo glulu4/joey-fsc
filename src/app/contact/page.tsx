@@ -90,12 +90,7 @@ export default function Page() {
 
     return (
         <div className="min-h-screen flex flex-col items-center m-3 pt-28">
-            {/* Main content with bottom padding to avoid footer overlap */}
 
-            {/* {success && (
-                <Confetti mode="boom" particleCount={500} colors={['#ff577f', '#ff884b', "#FFFF00"]} />
-
-            )} */}
             <main className="flex-1 ">
                 <div>
                     <HeaderText className="text-header-text font-medium font-serif text-center pt-10 md:pt-24">

@@ -55,11 +55,13 @@ export default async function page({
   return (
     <div className='min-h-screen'>
 
-      <div className='pt-44 p-4 sm:p-8'>
+      <div className='p-4 sm:p-8'>
         <ServiceHero
           title={serviceData.serviceTitle}
           description={serviceData.description}
           imageSrc={serviceData.coverImg}
+          className='mt-32'
+
 
         />
 

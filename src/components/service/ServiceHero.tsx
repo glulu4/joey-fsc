@@ -24,6 +24,7 @@ export default function ServiceHero({
         "sm:flex-row sm:justify-between sm:items-center",
         "p-10 px-20",
         "shadow-md",
+        className
         )}>
 
         <div className='max-w-xl h-full flex flex-col items-start justify-between space-y-5'>
