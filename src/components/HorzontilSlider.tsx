@@ -11,7 +11,7 @@ export const SAMPLE_DATA = [
 {
    
     name: "Anesthesia",
-    img: "/images/services/anesthesia.png",
+        img: "/images/services/anesthesia/anesthesia.png",
         href: "/service/anesthesia",
 
 
@@ -19,63 +19,63 @@ export const SAMPLE_DATA = [
 
     {
     name: "Bone Grafting",
-    img: "/images/services/bone-graft.png",
+        img: "/images/services/bone-graft/bone-graft.png",
         href: "/service/bone-grafting",
     
     },
 
     {
     name: "Botox",
-    img: "/images/services/botox.png",
+    img: "/images/services/botox/botox.png",
         href: "/service/botox-and-filler"
     },
 
     {
     name: "Facial Trauma",
-    img: "/images/services/facial-trauma.png",
+        img: "/images/services/facial-trauma/facial-trauma.png",
         href: "/service/facial-trauma",
     },
     {
     name: "Genioplasty / Chin Surgery",
-    img: "/images/services/genioplasty.png",
+        img: "/images/services/genioplasty/genioplasty.png",
         href: "/service/genioplasty",
 
     },
     {
         name: "Dental Implants",
-        img: "/images/services/implants.png",
+        img: "/images/services/implant/implants.png",
         href: "/service/dental-implants",
     },
     {
         name: "Oral Pathology",
-        img: "/images/services/oral-pathology.png",
+        img: "/images/services/oral-pathology/oral-pathology.png",
         href: "/service/oral-pathology",
     },
     {
         name: "Orthognathic Surgery",
-        img: "/images/services/orthognathic.png",
+        img: "/images/services/orthognathic/orthognathic.png",
         href: "/service/orthognathic-surgery",
     },
     {
         name: "Sleep Apnea",
-    img: "/images/services/sleep-apnea.png",
+        img: "/images/services/sleep-apnea/sleep-apnea.png",
         href: "/service/sleep-apnea",
     },
     {
         name: "TMJ",
-        img: "/images/services/tmj.png",
+        img: "/images/services/tmj/tmj.png",
         href: "/service/tmj",
     },
 
     {
         name: "Tooth Extractions",
-        img: "/images/services/tooth-extract.png",
+        img: "/images/services/tooth-extract/tooth-extract.png",
         href: "/service/extractions",
         
     },
     {
         name: "Wisdom Teeth",
-        img: "/images/services/wisdom-tooth.png",
+        img: "/images/services/wisdom/wisdom-tooth.png",
         href: "/service/wisdom-tooth",
     },
 
@@ -175,6 +175,7 @@ export default function HorizontalSlider() {
 
                     </a>
                 ))}
+
             </div>
 
 

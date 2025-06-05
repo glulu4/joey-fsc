@@ -64,7 +64,7 @@
 import React from 'react'
 import HeaderText from '../ui/HeaderText'
 import clsx from 'clsx'
-import {Service, services} from '../../../public/services';
+import {services} from '../../../public/services';
 import Image from 'next/image';
 import BodyText from '../ui/BodyText';
 
@@ -83,8 +83,7 @@ export default function LearnMore({
 
     const indexes = [service1Idx, service2Idx];
 
-    console.log("indexes", indexes);
-    
+
     // const services = [service1, service2];
 
     // from slate-50 to 
@@ -110,13 +109,7 @@ export default function LearnMore({
                     {indexes.map((serviceIdx, idx) => {
 
                         const serviceKey = Object.keys(services)[serviceIdx];
-                        const service = services[serviceKey];
-
-
-                        console.log("serviceKey", serviceKey);
-                        
-
-                        
+                        const service = services[serviceKey];                        
                         
                         return (
                             <div
