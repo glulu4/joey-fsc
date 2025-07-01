@@ -22,7 +22,7 @@ export default function ServiceHero({
     <div className={clsx(
         'bg-primaryCyan/20 w-full h-full rounded-[48px] flex flex-col items-center justify-center',
         "sm:flex-row sm:justify-between sm:items-center",
-        "p-10 px-20",
+        "p-10 sm:px-20",
         "shadow-md",
         className
         )}>

@@ -214,7 +214,7 @@ export const services: {
     "dental-implants": {
         serviceTitle: "Dental Implants",
         description: "Permanent solutions for missing teeth...",
-        coverImg: "/images/services/implant/implant.png",
+        coverImg: "/images/services/implant/implants.png",
         para1Title: "Implant Placement Process",
         para1Text: "Dental implants provide a permanent foundation...",
         para1Img: "/images/services/implant/tooth-implant1.png",

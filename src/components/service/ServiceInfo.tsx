@@ -29,44 +29,31 @@ export default function ServiceInfo({
 }: ServiceInfoProps) {
     return (
         <div className='flex flex-col items-center justify-center container space-y-12 p-4 py-12'>
-            <HeaderText className='text-header-text font-serif font-medium'>
-                {infoHeader}
-            </HeaderText>
+            <RoughNotation type="highlight" show={true} color="#FBBFCA" animationDuration={1000} iterations={1} padding={10} strokeWidth={4} >
+                <HeaderText variant='large' className='text-header-text font-serif font-medium text-center'>
+                    {infoHeader}
+                </HeaderText>
+            </RoughNotation>
+
 
             {/* First Row */}
-            <div className='flex flex-col-reverse lg:flex-row items-center justify-around w-full gap-8 py-10'>
+            <div className='flex flex-col sm:flex-col-reverse lg:flex-row items-center justify-around w-full gap-8 py-10 pt-10'>
                 <div className='flex sm:w-1/2 flex-col items-start  gap-8 text-left'>
-                    <RoughNotation type="highlight" show={true} color="#FBBFCA" animationDuration={1000} iterations={1} padding={10} strokeWidth={4} >
+                    {/* <RoughNotation type="highlight" show={true} color="#FBBFCA" animationDuration={1000} iterations={1} padding={10} strokeWidth={4} > */}
 
-                        <HeaderText className='text-header-text font-serif font-medium'>
+                        <HeaderText  className='text-header-text font-serif font-medium'>
                             {title1}
                         </HeaderText>
-                    </RoughNotation>
+                    {/* </RoughNotation> */}
                     <BodyText className='text-body-text max-w-2xl'>
                         {description1}
                     </BodyText>
                 </div>
 
-                {/* <div className=''>
-                    <Image
-                        src={imageSrc1}
-                        alt='Wisdom Teeth'
-                        width={500}
-                        height={500}
-                        className='object-cover'
-                    />
-                </div> */}
-
-
                 <div className="relative">
-                    {/* <SvgBlob
-                        className=" absolute -top-28 -right-40 -z-10 overflow-hidden"
-                        color="#C8E7DB"
-                        variant="solid"
-                        // style={{width: '100%', height: '100%'}}
-                    /> */}
+
                     <SvgBlob
-                        className="absolute  -top-40 -right-30 -z-10 overflow-hidden"
+                        className="hidden sm:block absolute -top-40 -right-30 -z-10 overflow-hidden"
                         color="#C8E7DB"
                         variant="solid"
                     />
@@ -85,11 +72,11 @@ export default function ServiceInfo({
             {/* Second Row - Reversed on large screens */}
             <div className='flex flex-col lg:flex-row-reverse items-center justify-around w-full gap-8 py-10'>
                 <div className='flex flex-col items-start text-left sm:w-1/2 sm:items-end gap-8 sm:text-right'>
-                    <RoughNotation multiline type="box" show={true} color='orange' animationDuration={1000} iterations={1} padding={10} strokeWidth={4} >
+                    {/* <RoughNotation multiline type="box" show={true} color='orange' animationDuration={1000} iterations={1} padding={10} strokeWidth={4} > */}
                         <HeaderText className='text-header-text font-serif font-medium'>
                             {title2}
                         </HeaderText>
-                    </RoughNotation>
+                    {/* </RoughNotation> */}
 
 
                     <BodyText className='text-body-text text-left sm:text-right max-w-2xl'>
@@ -109,7 +96,7 @@ export default function ServiceInfo({
 
                 <div className='relative'>
                     <SvgBlob
-                        className="absolute -top-28 -left-40 -z-10 overflow-hidden"
+                        className="hidden sm:block absolute -top-28 -left-40 -z-10 overflow-hidden"
                         color="lightblue"
                         variant="solid"    
                     />

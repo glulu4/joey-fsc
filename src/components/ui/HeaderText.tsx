@@ -16,7 +16,7 @@ export default function HeaderText({
     const variants = {
         small: "text-2xl tracking-tight sm:text-3xl",
         default: "text-3xl  sm:text-4xl md:text-5xl tracking-tight",
-        large: "text-5xl tracking-tight sm:text-6xl lg:text-7xl"
+        large: "text-4xl tracking-tight sm:text-6xl lg:text-7xl"
     }
 
     return (
