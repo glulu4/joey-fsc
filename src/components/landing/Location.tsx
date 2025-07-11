@@ -18,7 +18,7 @@ export default function Location() {
             Proudly Serving the Connecticut Community
           </HeaderText>
           <BodyText className='text-body-text'>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla deleniti distinctio officiis veritatis laborum suscipit totam ipsum officia, quis optio, quasi numquam, a ipsa. Asperiores, deleniti. Vero earum odit est.
+            Located in Trumbull, Connecticut, we are dedicated to providing exceptional care and advanced surgical solutions to our local community. Our team of experienced professionals is committed to enhancing your well-being and confidence through personalized treatment plans.
           </BodyText>
         </div>
         <div className='flex flex-[0.55] items-center justify-end  h-full w-full'>

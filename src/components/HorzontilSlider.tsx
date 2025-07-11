@@ -6,81 +6,79 @@ import BodyText from "./ui/BodyText";
 import Image from "next/image";
 import {isMobile} from 'react-device-detect';
 
-export const SAMPLE_DATA = [
-    
-{
-   
-    name: "Anesthesia",
+export const services = [
+    {
+        name: "Anesthesia",
         img: "/images/services/anesthesia/anesthesia.png",
         href: "/service/anesthesia",
-
-
-},
-
+        description: "We offer safe and effective anesthesia options to ensure a comfortable surgical experience with minimal discomfort or anxiety.",
+    },
     {
-    name: "Bone Grafting",
+        name: "Bone Grafting",
         img: "/images/services/bone-graft/bone-graft.png",
         href: "/service/bone-grafting",
-    
+        description: "Bone grafting restores bone structure in the jaw, often as preparation for dental implants or following trauma or disease.",
     },
-
     {
-    name: "Botox",
-    img: "/images/services/botox/botox.png",
-        href: "/service/botox-and-filler"
+        name: "Botox",
+        img: "/images/services/botox/botox.png",
+        href: "/service/botox-and-filler",
+        description: "Botox and dermal fillers help smooth fine lines, reduce wrinkles, and restore youthful volume to facial features.",
     },
-
     {
-    name: "Facial Trauma",
+        name: "Facial Trauma",
         img: "/images/services/facial-trauma/facial-trauma.png",
         href: "/service/facial-trauma",
+        description: "We specialize in treating facial injuries, including fractures and lacerations, with precision and compassion.",
     },
     {
-    name: "Genioplasty / Chin Surgery",
+        name: "Genioplasty / Chin Surgery",
         img: "/images/services/genioplasty/genioplasty.png",
         href: "/service/genioplasty",
-
+        description: "Genioplasty enhances the chin’s shape and projection to create facial balance and improve appearance or function.",
     },
     {
         name: "Dental Implants",
         img: "/images/services/implant/implants.png",
         href: "/service/dental-implants",
+        description: "Dental implants are a permanent solution for missing teeth, offering natural-looking results and long-term stability.",
     },
     {
         name: "Oral Pathology",
         img: "/images/services/oral-pathology/oral-pathology.png",
         href: "/service/oral-pathology",
+        description: "We diagnose and treat oral diseases and abnormalities, including cysts, tumors, and lesions of the mouth and jaw.",
     },
     {
         name: "Orthognathic Surgery",
         img: "/images/services/orthognathic/orthognathic.png",
         href: "/service/orthognathic-surgery",
+        description: "Orthognathic (jaw) surgery corrects misaligned jaws to improve function, facial symmetry, and breathing.",
     },
     {
         name: "Sleep Apnea",
         img: "/images/services/sleep-apnea/sleep-apnea.png",
         href: "/service/sleep-apnea",
+        description: "We offer surgical solutions for obstructive sleep apnea to improve airflow, reduce snoring, and enhance sleep quality.",
     },
     {
         name: "TMJ",
         img: "/images/services/tmj/tmj.png",
         href: "/service/tmj",
+        description: "TMJ treatment relieves jaw pain, stiffness, and clicking caused by temporomandibular joint disorders.",
     },
-
     {
         name: "Tooth Extractions",
         img: "/images/services/tooth-extract/tooth-extract.png",
         href: "/service/extractions",
-        
+        description: "We perform gentle, precise tooth extractions when teeth are damaged, decayed, or causing crowding.",
     },
     {
         name: "Wisdom Teeth",
         img: "/images/services/wisdom/wisdom-tooth.png",
         href: "/service/wisdom-tooth",
+        description: "Wisdom tooth removal prevents crowding, pain, and infections by safely extracting third molars.",
     },
-
-
-
 ];
 
 
@@ -142,9 +140,9 @@ export default function HorizontalSlider() {
                 ref={containerRef}
                 className="w-full overflow-x-auto scroll-smooth snap-x snap-mandatory flex gap-6 py-6"
             >
-                {SAMPLE_DATA.map((item, idx) => (
+                {services.map((item, idx) => (
                     <a
-                        href={item.href}  
+                        href={item.href}
                         key={idx}
                         className={` bg-background snap-center shrink-0 rounded-3xl shadow-md flex flex-col items-center justify-around text-center p-6`}
                         style={{
@@ -154,22 +152,21 @@ export default function HorizontalSlider() {
                     >
                         <div className="self-start text-left w-3/4 space-y-6">
                             <HeaderText variant="small" className="text-header-text mb-12 font-serif" >
-                               {item.name}
-                            </HeaderText>          
+                                {item.name}
+                            </HeaderText>
                             <BodyText className="text-body-text ">
-                                Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                {item.description}
                             </BodyText>
 
                         </div>
                         <div className="self-center">
                             <Image
-                            width={200}
-                            height={200}
-                            alt="App screenshot"
-                            src={item.img}
+                                width={200}
+                                height={200}
+                                alt="App screenshot"
+                                src={item.img}
                                 className="sm:w-full sm:h-full object-cover"
-                            priority
+                                priority
                             />
                         </div>
 

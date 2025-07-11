@@ -112,7 +112,7 @@ export default function PreOpPage() {
                     Dental Surgery Pre-Op Instructions: Medications
                 </HeaderText>
                 <BodyText className="text-body-text">
-                    If our doctors prescribe you medications for your surgery, it is important that you have them filled prior to your surgical appointment...
+                    If you are taking any medications, please inform our office before your surgery. Some medications may need to be adjusted or temporarily stopped before your procedure. This includes blood thinners, anticoagulants, and certain supplements.
                 </BodyText>
             </section>
 

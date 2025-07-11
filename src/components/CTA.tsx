@@ -44,8 +44,7 @@ export default function CTA() {
           {' '}Today
             </HeaderText>
             <BodyText>
-                We are here to help you with all  
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium velit optio corporis inventore voluptates reprehenderit quae, ex recusandae labore consequatur eum dolorem deserunt odio odit alias? Fugiat distinctio dolorum reiciendis!
+              Experience personalized care and advanced surgical solutions at Facial Surgery Center. Our team is dedicated to enhancing your well-being and confidence.
             </BodyText>
         </div>
 

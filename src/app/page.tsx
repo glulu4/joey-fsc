@@ -12,7 +12,9 @@ const Page = () => {
     <div className="min-h-screen">
 
       <div className="container">
-        <Hero />
+        <Hero
+          subcopy="Serving Trumbull Connecticut for years, Facial Surgery Center has been putting patients’ needs first, providing superior care in a safe and compassionate environment."
+         />
       </div>
 
       <div >
