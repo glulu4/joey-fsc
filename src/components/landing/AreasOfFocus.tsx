@@ -30,7 +30,7 @@ export default function AreasOfFocus({ className }: AreasOfFocusProps) {
 
 
         <BodyText className='text-center text-body-text mt-4'>
-          At Facial Surgery Center, we specialize in a wide range of surgical and non-surgical procedures to enhance your facial aesthetics. Our areas of focus include:
+          At The Facial Surgery Center, we specialize in a wide range of surgical and non-surgical procedures to enhance your facial aesthetics. Our areas of focus include:
         </BodyText>
 
       </div>

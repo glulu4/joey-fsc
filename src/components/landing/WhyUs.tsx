@@ -35,10 +35,10 @@ export default function WhyUs() {
                     <div className="text-center w-3/4 mx-auto">
                         <div className="self-center">
           <HeaderText variant="default" className="text-header-text font-serif font-normal">
-                                Why Patients Choose Facial Surgery Center
+                                Why patients choose The Facial Surgery Center
                             </HeaderText>
                             <BodyText className="mt-8 text-body-text">
-                                At Facial Surgery Center, we’re committed to excellence at every step. From your first consultation to final results, our team is focused on safety, artistry, and compassionate care.
+                                At The Facial Surgery Center, we’re committed to excellence at every step. From your first consultation to final results, our team is focused on safety, artistry, and compassionate care.
                             </BodyText>
                         </div>
                     </div>

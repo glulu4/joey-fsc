@@ -1,6 +1,6 @@
 
 import CTA from "@/components/CTA";
-import HorizontalSlider from "@/components/HorzontilSlider";
+import HorizontalSlider from "@/components/landing/HorzontilSlider";
 import AreasOfFocus from "@/components/landing/AreasOfFocus";
 import Hero from "@/components/landing/Hero";
 import Location from "@/components/landing/Location";
@@ -13,7 +13,7 @@ const Page = () => {
 
       <div className="container">
         <Hero
-          subcopy="Serving Trumbull Connecticut for years, Facial Surgery Center has been putting patients’ needs first, providing superior care in a safe and compassionate environment."
+          subcopy="Serving Trumbull Connecticut for over 30 years, Facial Surgery Center has been putting patients’ needs first, providing superior care in a safe and compassionate environment."
          />
       </div>
 
