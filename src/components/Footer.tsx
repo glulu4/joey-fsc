@@ -17,8 +17,8 @@ const navigation = {
   ],
   company: [
     {name: "Contact", href: "/contact"},
-    {name: 'Blog', href: '/blog'},
-    {name: 'Press', href: '#'},
+    // {name: 'Blog', href: '/blog'},
+    // {name: 'Press', href: '#'},
   ],
   // legal: [
   //   {name: 'Terms of service', href: '#'},
@@ -148,7 +148,7 @@ export const Footer: FunctionComponent = () => {
         <div className="mt-8 border-t border-gray-900/10 pt-8 md:flex md:items-center md:justify-between">
 
           <p className="mt-8 text-sm/6 text-body-text md:order-1 md:mt-0">
-            &copy; {new Date().getFullYear()} {config.name.name}, Inc. All rights reserved.
+            &copy; {new Date().getFullYear()} The {config.name.name}, All rights reserved.
           </p>
         </div>
       </div>

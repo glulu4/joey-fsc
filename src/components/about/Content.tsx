@@ -10,7 +10,7 @@ export default function Content() {
             <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
 
                 {/* ---------- Page Title & Intro ---------- */}
-                <h1 className="sr-only">About Facial Surgery Center</h1>
+                <h1 className="sr-only">About The Facial Surgery Center</h1>
                 <HeaderText
                     as="h2"
                     className="my-4 font-medium font-serif tracking-tight text-header-text"
@@ -19,7 +19,7 @@ export default function Content() {
                 </HeaderText>
 
                 <BodyText className="mt-6 text-xl/8 text-body-text">
-                    At Facial Surgery Center we believe every person deserves to look
+                    At The Facial Surgery Center we believe every person deserves to look
                     and feel their best. Our mission is to enhance well-being and
                     confidence through tailored surgical plans, cutting-edge technology,
                     and genuine compassion. From first consultation to final follow-up,

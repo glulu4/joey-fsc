@@ -15,13 +15,15 @@ const incentives = [
     {
         name: 'Personalized Consultations',
         Icon: HandHelping,
-        description: "We listen carefully to your goals and design a personalized treatment plan that enhances your natural beauty.",
+        description: "We listen carefully to your goals and design a personalized treatment plan for you.",
         color: 'text-primary-teal',
     },
     {
-        name: 'Natural-Looking Results',
+        name: 'Superior Results',
         Icon: UserRectangle,
-        description: "From subtle enhancements to transformative surgeries, our focus is always on balanced, natural-looking outcomes.",
+        description: `
+        From wisdom tooth extraction to jaw surgery we use  advanced tools and equipment in state- of - the - art clinical settings to address our patients’ problems and maintain their oral health
+        `,
         color: 'text-primaryOrange',
     },
 ]

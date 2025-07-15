@@ -44,7 +44,7 @@ export default function CTA() {
           {' '}Today
             </HeaderText>
             <BodyText>
-              Experience personalized care and advanced surgical solutions at Facial Surgery Center. Our team is dedicated to enhancing your well-being and confidence.
+          Experience personalized care and advanced surgical solutions at The Facial Surgery Center.  We are here to help with all your oral and facial needs.
             </BodyText>
         </div>
 

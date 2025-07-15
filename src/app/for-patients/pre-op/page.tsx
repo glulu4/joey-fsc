@@ -38,7 +38,7 @@ const anesthesiaInstructions = [
     {
         title: "Nitrous Oxide",
         content:
-            "Nitrous oxide, or laughing gas, is used in conjunction with a local anesthetic. This means that you will only be able to eat a light meal several hours before your appointment. It is not required to have someone drive you to and from your appointment, but you may wish to have someone drive you if undergoing a more extensive procedure.",
+            "Nitrous oxide, or laughing gas, is used in conjunction with a local anesthetic. This means that you will only be able to eat a light meal several hours before your appointment. ",
     },
     {
         title: "IV Anesthesia",
@@ -49,7 +49,7 @@ const anesthesiaInstructions = [
 
 export default function PreOpPage() {
     return (
-        <div className="px-6 py-16 max-w-4xl mx-auto space-y-16 pt-40">
+        <div className="px-6 py-16 max-w-5xl mx-auto space-y-16 pt-40">
             {/* Hero Section */}
             <section className="text-center space-y-4 py-20">
                 <HeaderText className="font-medium font-serif text-header-text pb-6">
@@ -70,15 +70,7 @@ export default function PreOpPage() {
                     When it comes to having oral surgery, it is important that you are prepared adequately and that you know what to expect...
 
                 </BodyText>
-
-
-                <div className="flex flex-wrap justify-center gap-4">
-                    <Button text="Download PDF" href="/downloads/pre-op-instructions.pdf" />
-                    <Button text="Instrucciones (Español)" href="/downloads/instrucciones-preoperatorias.pdf" />
-                </div>
             </section>
-
-
             {/* General Pre-Operative Instructions */}
             <section className="space-y-6">
                 <HeaderText className="font-medium font-serif text-header-text">General Pre-Operative Instructions</HeaderText>

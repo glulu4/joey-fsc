@@ -27,16 +27,13 @@ export default function ServiceHero({
         className
         )}>
 
-        <div className='max-w-xl h-full flex flex-col items-start justify-between space-y-5'>
+        <div className='max-w-xl h-full flex flex-col items-start justify-between lg:space-y-20 md:space-y-10 space-y-6'>
             <HeaderText variant='large' className='text-header-text font-serif font-medium'>
                 {title}
             </HeaderText>
 
             <BodyText className='text-body-text-light'>
                 {description}
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Doloremque, aliquid. Error veniam dolore quibusdam consequuntur aspernatur sunt impedit repellendus consequatur 
-                ullam possimus, necessitatibus cum cumque odio enim officia explicabo odit.
             </BodyText>
         </div>
 
