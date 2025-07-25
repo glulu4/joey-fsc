@@ -14,16 +14,18 @@ interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {
     required?: boolean;
     textarea?: boolean; // Optional textarea
     rows?: number; // Number of rows for textarea
+    className?: string; // Optional className for additional styling
+    labelClassName?: string; // Optional className for label
 }
 
-export default function TextInput({label, value, setValue, type = "text", placeholder, icon, ...props}: TextInputProps) {
+export default function TextInput({label, value, setValue, type = "text", placeholder, className, labelClassName, icon, ...props}: TextInputProps) {
     return (
         <div className="flex flex-col w-full">
             {/* Label */}
-            <label className="text-md font-semibold text-primaryGreenDark mb-2">{label}</label>
+            <label className={clsx(labelClassName, "text-md font-semibold mb-2")}>{label}</label>
 
             {/* Input Wrapper */}
-            <div className="relative flex items-center border border-gray-300 rounded-lg px-4 py-3 bg-white focus-within:ring-2 focus-within:ring-primaryGreenLight">
+            <div className="relative flex items-center border border-gray-300 rounded-lg px-4 py-3 bg-whitesmoke focus-within:ring-2 focus-within:ring-primaryGreenLight">
                 {/* Optional Icon */}
                 {icon && <span className="text-gray-500 mr-2">{icon}</span>}
 
@@ -36,6 +38,7 @@ export default function TextInput({label, value, setValue, type = "text", placeh
                     onChange={(e) => setValue(e.target.value)}
                     placeholder={placeholder || ""}
                     className={clsx(
+                        className,
                         "w-full text-lg font-semibold text-gray-600 bg-transparent focus:outline-none"
                     )}
                     pattern={type === "email" ? "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$" : undefined} // Email validation

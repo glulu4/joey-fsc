@@ -45,7 +45,7 @@ const config = {
         primaryOrange: '#ff8e1d',
 
         primaryPink:'#FEB7B1',
-        // primaryGreen: '#00CE00',
+        // \primaryGreen: '#00CE00',
 
         primaryCyan: '#69d1e3',
         "primary-teal": "#005D64",
@@ -54,7 +54,7 @@ const config = {
         // "header-text": '#183c3c',
         "header-text": '#2c3639',
 
-
+        whitesmoke: '#f5f5f5',
         "body-text":'#33312E',
         "body-text-light": '#4A4745',
 
