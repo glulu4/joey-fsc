@@ -257,7 +257,7 @@ export default function DoctorsPage() {
                 </BodyText>
             </div>
 
-            <ul role="list" className="flex flex-col sm:flex-row mx-auto sm:mt-20 lg:gap-8">
+            <ul role="list" className="flex flex-col-reverse sm:flex-row mx-auto sm:mt-20 lg:gap-8">
                 {doctors.map((person) => (
                     <li key={person.name} className="rounded-2xl px-8 py-10">
                         {/* <Image
