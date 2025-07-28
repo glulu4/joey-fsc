@@ -244,7 +244,7 @@ const services = [
     {
         name: "TMJ",
         img: "/images/services/tmj/tmj.webp",
-        href: "/service/tmj",
+        href: "/service/tmj-disorder",
         description: "TMJ treatment relieves jaw pain, stiffness, and clicking caused by temporomandibular joint disorders.",
     },
     {
