@@ -295,7 +295,7 @@ export const Navigation: FunctionComponent = () => {
                       className="flex items-center space-x-3 py-2 px-4 rounded-lg hover:bg-white/10 transition-colors duration-200"
                     >
                       <Phone className="text-primaryCyan"  size="18" />
-                      <span>(123)-456-7890</span>
+                      <span>(203) 261-7800</span>
                     </a>
                     <a
                       href="mailto:sales@paragonexterior.com"
