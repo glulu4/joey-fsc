@@ -36,7 +36,7 @@ const menuItems: MenuItem[] = [
     name: "Services",
     href: "/services",
     subItems: [
-      {name: "Wisdom Tooth", href: "/service/wisdom-tooth"},
+      {name: "Wisdom Teeth", href: "/service/wisdom-teeth"},
       {name: "Dental Implants", href: "/service/dental-implants"},
       {name: "Orthognathic Surgery", href: "/service/orthognathic-surgery"},
       {name: "Bone Grafting", href: "/service/bone-grafting"},

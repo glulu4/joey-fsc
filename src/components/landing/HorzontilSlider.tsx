@@ -256,7 +256,7 @@ const services = [
     {
         name: "Wisdom Teeth",
         img: "/images/services/wisdom/wisdom-tooth.webp",
-        href: "/service/wisdom-tooth",
+        href: "/service/wisdom-teeth",
         description: "Wisdom tooth removal prevents crowding, pain, and infections by safely extracting third molars.",
     },
 ];

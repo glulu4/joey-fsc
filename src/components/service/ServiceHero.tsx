@@ -43,7 +43,7 @@ export default function ServiceHero({
                 alt={title}
                 width={500}
                 height={500}
-                className='w-full h-full object-cover rounded-[48px] sm:w-[500px] sm:h-[500px]'
+                className='w-full h-full object-cover sm:w-[500px] sm:h-[500px]'
             />
         </div>
 
