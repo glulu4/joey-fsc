@@ -13,6 +13,7 @@ import Link from "next/link";
 import {FunctionComponent, useEffect, useState, useRef} from "react";
 import Button from "./Button";
 import {usePathname} from "next/navigation";
+import {config} from "@/config";
 
 interface MenuItem {
   name: string;
@@ -292,18 +293,18 @@ export const Navigation: FunctionComponent = () => {
                   <h3 className="text-lg font-semibold mb-4">Get In Touch</h3>
                   <div className="space-y-3">
                     <a
-                      href="tel:+1234567890"
+                      href="tel:(203) 261-7800"
                       className="flex items-center space-x-3 py-2 px-4 rounded-lg hover:bg-white/10 transition-colors duration-200"
                     >
                       <Phone className="text-primaryCyan"  size="18" />
-                      <span>(203) 261-7800</span>
+                      <span>{config.officePhone}</span>
                     </a>
                     <a
-                      href="mailto:sales@paragonexterior.com"
+                      href={`mailto:${config.officeEmail}`}
                       className="flex items-center space-x-3 py-2 px-4 rounded-lg hover:bg-white/10 transition-colors duration-200"
                     >
                       <Mail className="text-primaryOrange" size="18" />
-                      <span>contact@fsc.com</span>
+                      <span>{config.officeEmail}</span>
                     </a>
                     <div className="flex items-center space-x-3 py-2 px-4">
                       <MapPin className="text-red-700" size="18" />

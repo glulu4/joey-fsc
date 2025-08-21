@@ -1,6 +1,7 @@
 import Form from '@/components/contact/Form';
 import BodyText from '@/components/ui/BodyText';
 import HeaderText from '@/components/ui/HeaderText';
+import {config} from '@/config';
 import clsx from 'clsx';
 import {Clock2Icon, MapIcon, PhoneIcon} from 'lucide-react';
 import React from 'react';
@@ -15,13 +16,19 @@ const contactInfo = [
     {
         icon: PhoneIcon,
         label: "Phone",
-        value: "(203) 261-7800",
+        value: config.officePhone,
         color: "text-primaryOrange"
     },
     {
         icon: Clock2Icon,
         label: "Hours",
-        value: "Mon-Fri: 9am - 5pm",
+        value: <>
+            Monday - Thursday: 8:00 AM - 5:00 PM
+            <br />
+            Friday: 8:00 AM - 12:00 PM
+            <br />
+            Saturday - Sunday: Closed
+        </>,
         color: "text-primaryPink"
     }
 ];
