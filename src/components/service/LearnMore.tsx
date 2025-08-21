@@ -1,6 +1,3 @@
-
-
-
 import React from 'react'
 import HeaderText from '../ui/HeaderText'
 import clsx from 'clsx'
@@ -19,14 +16,8 @@ export default function LearnMore({
     service2Idx,
     className,
 }: LearnMoreProps) {
-
-
+    
     const indexes = [service1Idx, service2Idx];
-
-
-    // const services = [service1, service2];
-
-    // from slate-50 to 
 
     return (
         <section className={clsx(
@@ -49,8 +40,8 @@ export default function LearnMore({
                     {indexes.map((serviceIdx, idx) => {
 
                         const serviceKey = Object.keys(services)[serviceIdx];
-                        const service = services[serviceKey];                        
-                        
+                        const service = services[serviceKey];
+
                         return (
                             <div
                                 key={idx}
@@ -70,7 +61,7 @@ export default function LearnMore({
 
                                 {/* Content */}
                                 <div className='p-8 lg:p-10'>
-                                    <HeaderText variant='small' className='font-medium font-serif text-header-text mb-4 transition-colors duration-300'>
+                                    <HeaderText as='h3' variant='small' className='font-medium font-serif text-header-text mb-4 transition-colors duration-300'>
                                         {service.serviceTitle}
                                     </HeaderText>
 
@@ -104,24 +95,9 @@ export default function LearnMore({
                                 </div>
                             </div>
                         )
-     
-})}
-                </div>
 
-                {/* Bottom CTA */}
-                {/* <div className='text-center mt-16'>
-                    <p className='text-lg text-gray-600 mb-6'>
-                        Have questions about our services?
-                    </p>
-                    <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                        <button className='px-8 py-3 bg-white text-blue-600 font-semibold rounded-xl border-2 border-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300 shadow-md'>
-                            Schedule Consultation
-                        </button>
-                        <button className='px-8 py-3 bg-gray-900 text-white font-semibold rounded-xl hover:bg-gray-800 transition-colors duration-300 shadow-md'>
-                            View All Services
-                        </button>
-                    </div>
-                </div> */}
+                    })}
+                </div>
             </div>
         </section>
     )

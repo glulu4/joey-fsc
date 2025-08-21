@@ -31,8 +31,13 @@ const fontSerif = Literata({
 
 
 export const metadata: Metadata = {
-  title: config.name.metadata.title,
-  description: config.name.metadata.description,
+  // title: config.name.metadata.title,
+  title: {
+    absolute: "Facial Surgery Center",
+    // template: "%s | Facial Surgery Center",
+    default: "Facial Surgery Center | Best Oral and Maxillofacial Surgeons",
+  },
+  description: "Serving Trumbull Connecticut for over 30 years, The Facial Surgery Center has been providing superior oral maxillofacial care for patients.",
   openGraph: {
     title: config.name.metadata.title,
     description: config.name.metadata.description,

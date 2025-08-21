@@ -10,9 +10,10 @@ export const services: {
         para2Text: string;
         para2Img: string;
         serviceTitle2: string;
+        ctaText: string; // Optional CTA text for the service
     };
 } = {
-    "wisdom-teeth": {
+    "wisdom-teeth-removal": {
         serviceTitle: "Wisdom Teeth Removal",
         description: "Expert removal of wisdom teeth to alleviate pain, prevent complications, and promote optimal oral health. Our experienced team ensures a comfortable, stress-free procedure using the latest techniques.",
         coverImg: "/images/services/wisdom/wisdom-tooth.webp",
@@ -22,9 +23,11 @@ export const services: {
         para2Title: "Recovery and Aftercare",
         para2Text: "Following wisdom tooth removal, proper aftercare is crucial for a smooth and speedy recovery. Patients are typically advised to rest, apply cold compresses, and take prescribed pain medication to manage discomfort. Maintaining oral hygiene with gentle rinsing and avoiding strenuous activities can significantly reduce healing time. Our team provides comprehensive guidelines and support, ensuring you understand each step of the recovery process. Regular follow-ups help monitor healing and address any concerns promptly, facilitating a swift return to normal daily activities.",
         para2Img: "/images/services/wisdom/wisdom-teeth1.webp",
-        serviceTitle2: "Why Remove Wisdom Teeth?"
+        serviceTitle2: "Why Remove Wisdom Teeth?",
+        ctaText: "If you’re experiencing pain or swelling from your wisdom teeth, schedule your Trumbull, CT consultation today and take the first step toward lasting relief."
+
     },
-    "extractions": {
+    "tooth-extractions": {
         serviceTitle: "Tooth Extractions",
         description: "Our gentle, patient-focused approach helps relieve pain, prevents future oral health issues, and prepares your mouth for restorative treatments.	",
         coverImg: "/images/services/tooth-extract/tooth-extract.webp",
@@ -34,10 +37,12 @@ export const services: {
         para2Title: "Replacement Options After Extraction",
         para2Text: `Following tooth extraction, it's important to consider replacement options to restore oral function, aesthetics, and overall dental health. Dental implants, bridges, and dentures are common restorative solutions that can enhance your smile. With personalized recommendations and precise planning, we help you make informed decisions.`,
         para2Img: "/images/services/tooth-extract/tooth-extract2.webp",
-        serviceTitle2: "Why Are Tooth Extractions Important?"
+        serviceTitle2: "Why Are Tooth Extractions Important?",
+        ctaText: "Don’t wait until tooth pain worsens—book your tooth extraction consultation in Trumbull, CT and protect your oral health."
+
     },
-    "bone-grafting": {
-        serviceTitle: "Bone Grafting",
+    "dental-bone-grafting": {
+        serviceTitle: "Dental Bone Grafting",
         description: `Advanced bone grafting procedures designed to restore lost bone structure, strengthen your jaw, and prepare you for dental implants.	`,
         coverImg: "/images/services/bone-graft/bone-graft.webp",
         para1Title: "Why Bone Grafting is Needed",
@@ -46,7 +51,9 @@ export const services: {
         para2Title: "Types of Bone Grafts We Offer",
         para2Text: `We offer various bone grafting techniques tailored to individual needs, including autografts (using your own bone), allografts (donor bone), xenografts (animal-derived bone), and synthetic graft materials. Each type of graft offers distinct advantages depending on the specific situation and desired outcome.`,
         para2Img: "/images/services/bone-graft/bone-graft-2.webp",
-        serviceTitle2: "Why is Bone Grafting Important?"
+        serviceTitle2: "Why is Bone Grafting Important?",
+        ctaText: "Restore your jaw’s strength with expert bone grafting in Trumbull, CT—book your personalized consultation today."
+
     },
 
     "dental-implants": {
@@ -59,7 +66,9 @@ export const services: {
         para2Title: "Long-term Benefits of Dental Implants",
         para2Text: `Unlike removable dentures or bridges, dental implants provide unmatched stability, comfort, and convenience. With proper care, dental implants can last a lifetime, significantly improving your oral health and quality of life. Our team is committed to educating patients about maintenance practices, ensuring long-lasting satisfaction and optimal oral hygiene.	`,
         para2Img: "/images/services/implant/tooth-implant2.webp",
-        serviceTitle2: "Why Choose Dental Implants?"
+        serviceTitle2: "Why Choose Dental Implants?",
+        ctaText: "Ready to replace missing teeth with lasting dental implants? Schedule your Trumbull, CT consultation and restore your smile."
+
     },
 
     "orthognathic-surgery": {
@@ -72,7 +81,9 @@ export const services: {
         para2Title: "Comprehensive Treatment Planning",
         para2Text: `Treatment typically includes pre-surgical orthodontics, detailed surgical planning including an airway evaluation, and postoperative orthodontic adjustments. This comprehensive approach ensures seamless integration of surgery and orthodontic care, optimizing both functional and aesthetic results. We prioritize patient education and clear communication, helping you understand every step of the process and setting realistic expectations.`,
         para2Img: "/images/services/orthognathic/orthognathic-2.webp",
-        serviceTitle2: "Why Choose Orthognathic Surgery?"
+        serviceTitle2: "Why Choose Orthognathic Surgery?",
+        ctaText: "Improve your bite, breathing, and facial harmony by booking your orthognathic surgery consultation in Trumbull, CT today."
+
     },
     "genioplasty": {
         serviceTitle: "Genioplasty (Chin Surgery)",
@@ -84,7 +95,9 @@ export const services: {
         para2Title: "Facial Harmony and Confidence",
         para2Text: `A well-proportioned chin significantly impacts overall facial aesthetics, enhancing your profile and boosting self-confidence. Our genioplasty procedures aim not only to improve facial balance but also to positively influence your self-image and quality of life. Postoperative results typically include improved facial symmetry, a more youthful appearance, and enhanced self-esteem.`,
         para2Img: "/images/services/genioplasty/chin-surgery-2.webp",
-        serviceTitle2: "Why Consider Genioplasty?"
+        serviceTitle2: "Why Consider Genioplasty?",
+        ctaText: "Improve your jawline and your facial profile with the best genioplastic surgeons. Schedule your consultation in Trumbull, CT and see the difference."
+
     },
     "tmj-disorder": {
         serviceTitle: "TMJ Disorder Treatment",
@@ -96,7 +109,9 @@ export const services: {
         para2Title: "Effective Treatment Approaches",
         para2Text: `Our treatment options for TMJ disorders range from conservative therapies such as lifestyle changes, stress management techniques, physical therapy, and custom oral appliances, to advanced surgical interventions for more severe cases. Non-surgical treatments often provide significant relief by reducing stress on the joint, easing muscle tension, and correcting bite issues. For complex or persistent cases, surgical treatments like arthroscopy or open joint surgery may be recommended to restore joint function and alleviate symptoms. We prioritize minimally invasive methods whenever possible and ensure patients fully understand their treatment options.`,
         para2Img: "/images/services/tmj/tmj2.webp",
-        serviceTitle2: "Why Treat TMJ Disorders?"
+        serviceTitle2: "Why Treat TMJ Disorders?",
+        ctaText: "Find relief from jaw pain. Book your TMJ disorder evaluation in Trumbull, CT and start your journey to comfort."
+
     },
 
     "facial-trauma": {
@@ -109,7 +124,9 @@ export const services: {
         para2Title: "Advanced Reconstructive Solutions",
         para2Text: `We employ advanced reconstructive techniques tailored specifically to the unique needs of each patient. Our comprehensive treatments include repairing complex fractures, restoring facial symmetry, and reconstructing damaged soft tissues. Our surgeons collaborate closely with multidisciplinary teams to ensure holistic care that addresses both immediate injuries and long-term restoration goals.`,
         para2Img: "/images/services/facial-trauma/facial-trauma2.webp",
-        serviceTitle2: "Why Choose Facial Trauma Reconstruction?"
+        serviceTitle2: "Why Choose Facial Trauma Reconstruction?",
+        ctaText: "Trust your recovery to our facial trauma experts in Trumbull, CT. Schedule your consultation today."
+
     },
 
     "oral-pathology": {
@@ -122,7 +139,9 @@ export const services: {
         para2Title: "Biopsy and Treatment Planning",
         para2Text: `When abnormal tissue is identified, we perform biopsies to determine the exact nature of the issue. Our team carefully analyzes biopsy results to develop an individualized treatment plan. Treatments may range from medication and monitoring to surgical removal of lesions, depending on the diagnosis.`,
         para2Img: "/images/services/oral-pathology/oral-pathology-2.webp",
-        serviceTitle2: "Why Oral Pathology Matters"
+        serviceTitle2: "Why Oral Pathology Matters",
+        ctaText: "Early detection of oral diseases can make a large impact on your treatment. Book your oral pathology exam in Trumbull, CT for peace of mind."
+
     },
 
     "anesthesia": {
@@ -135,11 +154,16 @@ export const services: {
         para2Title: "Advanced Monitoring and Post-Op Care",
         para2Text: `We use state-of-the-art monitoring equipment to track vital signs in real-time, ensuring safe administration and rapid response to any changes. After the procedure, our team provides detailed post-operative instructions and observes patients until full recovery from sedation. Our commitment to safety doesn't end when the surgery is over—ongoing care and communication help ensure a smooth healing process.`,
         para2Img: "/images/services/anesthesia/anesthesia2.webp",
-        serviceTitle2: "Why Choose Professional Anesthesia?"
+        serviceTitle2: "Why Choose Professional Anesthesia?",
+        ctaText: "Experience stress-free surgery with expert anesthesia care. Schedule your consultation in Trumbull, CT today."
     },
     "botox-and-filler": {
         serviceTitle: "Botox and Dermal Fillers",
-        description: `Non-surgical cosmetic treatments designed to smooth wrinkles, restore volume, and enhance natural facial features. We use advanced techniques to deliver subtle, rejuvenating results tailored to your unique aesthetic goals.`,
+        description: `Non-surgical cosmetic treatments designed to smooth wrinkles, 
+restore volume, and enhance natural facial features. 
+We use advanced techniques to deliver subtle, rejuvenating 
+results tailored to your unique aesthetic goals. 
+If you're searching for botox near me, our clinic offers expert care in a comfortable, welcoming environment.`,
         coverImg: "/images/services/botox/botox.webp",
         para1Title: "Anti-Aging Treatments",
         para1Text: `Botox injections target dynamic wrinkles such as crow’s feet, frown lines, and forehead creases by temporarily relaxing the underlying muscles. This non-invasive treatment softens existing lines and prevents the formation of new ones with little to no downtime. Dermal fillers, on the other hand, restore lost volume in areas like the cheeks, lips, and under-eye hollows, creating a youthful, refreshed appearance. Our skilled practitioners tailor every treatment plan to your facial structure, skin type, and cosmetic preferences. The result is a natural, revitalized look that enhances your features without appearing overdone.`,
@@ -147,7 +171,9 @@ export const services: {
         para2Title: "Customized Aesthetic Plans",
         para2Text: `We believe every face is unique, which is why we develop personalized aesthetic plans that align with your beauty goals and lifestyle. During your consultation, we discuss your concerns in detail and recommend the best combination of Botox, dermal fillers, or other injectables for optimal results. Our providers prioritize safety, precision, and artistry to achieve results that complement your natural expressions and facial harmony.`,
         para2Img: "/images/services/botox/botox2.webp",
-        serviceTitle2: "Why Consider Botox and Fillers?"
+        serviceTitle2: "Why Consider Botox and Fillers?",
+        ctaText: "Refresh your look with Botox and fillers in Trumbull, CT. Book your personalized consultation today."
+
     },
     "sleep-apnea": {
         serviceTitle: "Sleep Apnea Treatment",
@@ -159,7 +185,9 @@ export const services: {
         para2Title: "Surgical Treatment Options",
         para2Text: `When conservative treatments like CPAP therapy or oral appliances are ineffective or not tolerated, surgical intervention may be the best solution. Our specialists offer a variety of procedures such as nasal surgery or maxillomandibular advancement to remove obstructions and open the airway. Each treatment plan is fully customized based on the patient’s anatomy, severity of sleep apnea, and personal preferences.`,
         para2Img: "/images/services/sleep-apnea/sleep2.webp",
-        serviceTitle2: "Why Treat Sleep Apnea?"
+        serviceTitle2: "Why Treat Sleep Apnea?",
+        ctaText: "Sleep better, breathe easier with the Facial Surgery Center. Schedule your sleep apnea treatment consultation in Trumbull, CT."
+
     }
 
 };

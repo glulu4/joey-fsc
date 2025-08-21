@@ -30,21 +30,17 @@ export default function ServiceInfo({
     return (
         <div className='flex flex-col items-center justify-center container space-y-12 p-4 py-12'>
             <RoughNotation type="highlight" show={true} color="#FBBFCA" animationDuration={1000} iterations={1} padding={10} strokeWidth={4} >
-                <HeaderText variant='large' className='text-header-text font-serif font-medium text-center'>
+                <HeaderText as='h2' variant='large' className='text-header-text font-serif font-medium text-center'>
                     {infoHeader}
                 </HeaderText>
             </RoughNotation>
-
-
             {/* First Row */}
             <div className='flex flex-col sm:flex-col-reverse lg:flex-row items-center justify-around w-full gap-8 py-10 pt-10'>
                 <div className='flex px-6 sm:px-0 sm:w-4/6 flex-col items-start  gap-8 text-left'>
-                    {/* <RoughNotation type="highlight" show={true} color="#FBBFCA" animationDuration={1000} iterations={1} padding={10} strokeWidth={4} > */}
 
-                    <HeaderText className='text-header-text font-serif font-medium md:pb-8'>
+                    <HeaderText as='h3' className='text-header-text font-serif font-medium md:pb-8'>
                             {title1}
                         </HeaderText>
-                    {/* </RoughNotation> */}
                     <BodyText className='text-body-text max-w-2xl'>
                         {description1}
                     </BodyText>
@@ -72,27 +68,15 @@ export default function ServiceInfo({
             {/* Second Row - Reversed on large screens */}
             <div className='flex flex-col lg:flex-row-reverse items-center justify-around w-full gap-8 py-10'>
                 <div className='flex flex-col items-start text-left px-6 sm:px-0 sm:w-4/6 sm:items-end gap-8 sm:text-right'>
-                    {/* <RoughNotation multiline type="box" show={true} color='orange' animationDuration={1000} iterations={1} padding={10} strokeWidth={4} > */}
-                        <HeaderText className='text-header-text font-serif font-medium md:pb-8'>
+                    <HeaderText as='h3' className='text-header-text font-serif font-medium md:pb-8'>
                             {title2}
                         </HeaderText>
-                    {/* </RoughNotation> */}
 
 
                     <BodyText className='text-body-text text-left sm:text-right max-w-2xl'>
                         {description2}
                     </BodyText>
                 </div>
-
-                {/* <div>
-                    <Image
-                        src={imageSrc2}
-                        alt='Wisdom Teeth Removal'
-                        width={500}
-                        height={500}
-                        className='object-cover'
-                    />
-                </div> */}
 
                 <div className='relative'>
                     <SvgBlob

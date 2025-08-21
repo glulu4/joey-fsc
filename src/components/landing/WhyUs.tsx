@@ -55,10 +55,10 @@ export default function WhyUs() {
                                     <incentive.Icon className={`size-16 ${incentive.color}`} />
                                 </div>
                                 <div className="mt-4">
-                                    <BodyText variant="default" className=" font-serif text-gray-900">
+                                    <BodyText as="h3" variant="default" className=" font-serif text-gray-900">
                                         {incentive.name}
                                     </BodyText>
-                                    <BodyText variant="small" className="mt-2 text-body-text">
+                                    <BodyText as="h4" variant="small" className="mt-2 text-body-text">
                                         {incentive.description}
                                     </BodyText>
                                 </div>

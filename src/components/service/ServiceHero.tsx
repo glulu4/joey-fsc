@@ -28,11 +28,11 @@ export default function ServiceHero({
         )}>
 
         <div className='max-w-xl h-full flex flex-col items-start justify-between lg:space-y-20 md:space-y-10 space-y-6'>
-            <HeaderText variant='large' className='text-header-text font-serif font-medium'>
+            <HeaderText as='h1' variant='large' className='text-header-text font-serif font-medium'>
                 {title}
             </HeaderText>
 
-            <BodyText className='text-body-text-light'>
+            <BodyText as="h2" className='text-body-text-light'>
                 {description}
             </BodyText>
         </div>

@@ -25,14 +25,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         <div className="">
             {/* Headline */}
             <div className="text-center sm:w-2/4 mx-auto">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium text-header-text leading-tight">
-                    <span className='font-serif'>Facial Surgery Center</span>
+                <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium text-header-text leading-tight">
+                    <span className='font-serif'>The Facial Surgery Center</span>
                     
                     <br />
                     <span className="font-light font-sans">Transform Your Confidence with a </span>
                     <span className="text-primaryYellow">{highlight}</span>
                     <span className="font-light"> Smile</span>
-                </h1>
+                </h2>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center px-12 justify-between h-full ">
@@ -50,7 +50,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
                 {/* Copy + CTA */}
                 <div className="flex flex-col items-center md:items-start space-y-6 py-8">
-                    <BodyText variant='default' className="text-gray-600 max-w-md text-center md:text-left">
+                    <BodyText as='h1' variant='default' className="text-gray-600 max-w-md text-center md:text-left">
                         {subcopy}
                     </BodyText>
                     <Button
