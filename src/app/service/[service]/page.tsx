@@ -10,6 +10,13 @@ import LearnMore from '@/components/service/LearnMore';
 import CTA from '@/components/CTA';
 
 
+export async function generateStaticParams(){
+  return Object.keys(services).map((key) => ({
+    service: key,
+  }))
+}
+
+
 export default async function page({
   params,
 }: {
