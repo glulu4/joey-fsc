@@ -24,7 +24,7 @@ export default function BodyText({
     }
 
     return (
-        <Tag className={`${variants[variant]} ${className} text-prettymtracking-tight`}>
+        <Tag className={`${variants[variant]} ${className} text-pretty tracking-tight`}>
             {children}
         </Tag>
     );
