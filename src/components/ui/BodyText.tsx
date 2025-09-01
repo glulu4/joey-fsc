@@ -3,7 +3,6 @@ import React from 'react'
 // className="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8"
 
 
-
 interface BodyTextProps {
     children: React.ReactNode;
     className?: string;

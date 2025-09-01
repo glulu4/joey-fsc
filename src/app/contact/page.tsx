@@ -10,7 +10,7 @@ const contactInfo = [
     {
         icon: MapIcon,
         label: "Address",
-        value: "115 Technology Dr b101, Trumbull, CT 06611",
+        value: "115 Technology Dr B-101, Trumbull, CT 06611",
         color: "text-primaryCyan"
     },
     {
@@ -23,9 +23,9 @@ const contactInfo = [
         icon: Clock2Icon,
         label: "Hours",
         value: <>
-            Monday - Thursday: 8:00 AM - 5:00 PM
+            Monday, Tuesday, & Thursday: 8:00 AM - 5:00 PM
             <br />
-            Friday: 8:00 AM - 12:00 PM
+            Wednesday & Friday: 8:00 AM - 12:00 PM
             <br />
             Saturday - Sunday: Closed
         </>,
