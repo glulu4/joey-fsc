@@ -8,7 +8,6 @@ const navigation = {
     {name: 'What to Expect', href: '/for-patients/what-to-expect'},
     {name: 'Pre Op', href: '/for-patients/pre-op'},
     {name: "Post Op", href: "/for-patients/post-op"},
-    {name: "Referral Form", href: "/referral-form.pdf"},
 
 
   ],
@@ -19,6 +18,8 @@ const navigation = {
   ],
   company: [
     {name: "Contact", href: "/contact"},
+    {name: "Referral Form", href: "/referral-form.pdf"},
+
     // {name: 'Blog', href: '/blog'},
     // {name: 'Press', href: '#'},
   ],
