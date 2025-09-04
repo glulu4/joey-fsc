@@ -164,6 +164,7 @@ export default function RootLayout({
             })
           }}
         />
+        <meta name="wot-verification" content="d8ec0942c528dedee856" />
       </head>
       <body
         className={cn(
