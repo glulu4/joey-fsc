@@ -75,7 +75,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "DentistClinic",
+              "@type": "MedicalClinic",
               "name": "Facial Surgery Center",
               "alternateName": "Facial Surgery Center - Oral and Maxillofacial Surgeons",
               "description": "Serving Trumbull Connecticut for over 30 years, The Facial Surgery Center has been providing superior oral maxillofacial care for patients.",
