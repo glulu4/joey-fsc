@@ -43,7 +43,7 @@ export const services: {
         para2Img: "/images/services/tooth-extract/tooth-extract2.webp",
         serviceTitle2: "Why Are Tooth Extractions Important?",
         ctaText: "Don't wait until tooth pain worsens—book your tooth extraction consultation in Trumbull, CT and protect your oral health.",
-        seoTitle: "Gentle Tooth Extraction Services Trumbull CT | Oral Surgery",
+        seoTitle: "Tooth Extraction Services Trumbull CT | Oral Surgery",
         seoDescription: "Safe, gentle tooth extractions in Trumbull, CT. Expert oral surgeons handle emergency extractions with advanced pain management."
 
     },
@@ -59,7 +59,7 @@ export const services: {
         para2Img: "/images/services/bone-graft/bone-graft-2.webp",
         serviceTitle2: "Why is Bone Grafting Important?",
         ctaText: "Restore your jaw's strength with expert bone grafting in Trumbull, CT—book your personalized consultation today.",
-        seoTitle: "Advanced Dental Bone Grafting Trumbull CT | Implant Preparation",
+        seoTitle: "Dental Bone Grafting Trumbull CT | Implant Preparation",
         seoDescription: "Professional dental bone grafting in Trumbull, CT. Restore jaw bone density for successful dental implant placement."
     },
 
@@ -158,7 +158,7 @@ export const services: {
         para2Img: "/images/services/oral-pathology/oral-pathology-2.webp",
         serviceTitle2: "Why Oral Pathology Matters",
         ctaText: "Early detection of oral diseases can make a large impact on your treatment. Book your oral pathology exam in Trumbull, CT for peace of mind.",
-        seoTitle: "Oral Pathology & Cancer Screening Trumbull CT | Early Detection",
+        seoTitle: "Oral Pathology & Screening Trumbull CT | Early Detection",
         seoDescription: "Professional oral pathology services in Trumbull, CT. Expert diagnosis, biopsies, and early detection of oral diseases."
 
     },
@@ -175,7 +175,7 @@ export const services: {
         para2Img: "/images/services/anesthesia/anesthesia2.webp",
         serviceTitle2: "Why Choose Professional Anesthesia?",
         ctaText: "Experience stress-free surgery with expert anesthesia care. Schedule your consultation in Trumbull, CT today.",
-        seoTitle: "Safe Dental Anesthesia Services Trumbull CT | IV Sedation",
+        seoTitle: "Safe Dental Anesthesia Services Trumbull CT | Sedation Options",
         seoDescription: "Professional anesthesia and sedation services in Trumbull, CT. Safe, comfortable IV sedation for all oral surgery procedures."
     },
     "botox-and-filler": {
