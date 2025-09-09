@@ -4,12 +4,33 @@ import ServiceHero from '@/components/service/ServiceHero';
 import ServiceInfo from '@/components/service/ServiceInfo';
 import LearnMore from '@/components/service/LearnMore';
 import CTA from '@/components/CTA';
-
+import { Metadata } from 'next';
 
 export async function generateStaticParams(){
   return Object.keys(services).map((key) => ({
     service: key,
   }))
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{service: string}>
+}): Promise<Metadata> {
+  const {service} = await params;
+  const serviceData = services[service];
+
+  if (serviceData) {
+    return {
+      title: serviceData.seoTitle,
+      description: serviceData.seoDescription,
+    }; 
+  }
+  else {
+    return {
+      title: "Facial Surgery Center | Best Oral and Maxillofacial Surgeons",
+    };
+  }
 }
 
 
