@@ -115,9 +115,7 @@ export default function RootLayout({
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.7",
-                "reviewCount": "24",
-                "bestRating": "5",
-                "worstRating": "1"
+                "reviewCount": "24"
               },
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
@@ -157,7 +155,6 @@ export default function RootLayout({
                   }
                 ]
               },
-              "paymentAccepted": ["Cash", "Credit Card", "Insurance"],
               "currenciesAccepted": "USD",
               "foundingDate": "1993",
               "slogan": "Superior oral maxillofacial care for over 30 years"
