@@ -176,6 +176,13 @@ export default function Form() {
                     </div>
                 </div>
 
+                {/* HIPAA Disclaimer */}
+                <div className="mt-8 p-4 bg-white/10 border border-white/20 rounded-md">
+                    <p className="text-white text-sm">
+                        <strong>Please be advised:</strong> This contact form is not HIPAA compliant. Please be cautious about including any protected health information (PHI) or sensitive medical details in your message.
+                    </p>
+                </div>
+
                 {/* Submit Button */}
                 <div className="mt-8 flex justify-center">
                     <button
