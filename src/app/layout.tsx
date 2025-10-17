@@ -75,7 +75,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "DentistClinic",
+              "@type": "Dentist",
               "name": "Facial Surgery Center",
               "alternateName": "Facial Surgery Center - Oral and Maxillofacial Surgeons",
               "description": "Serving Trumbull Connecticut for over 30 years, The Facial Surgery Center has been providing superior oral maxillofacial care for patients.",
@@ -93,11 +93,10 @@ export default function RootLayout({
                 "@type": "PostalAddress",
                 "streetAddress": "115 Technology Dr B-101",
                 "addressLocality": "Trumbull",
-                "addressRegion": "CT", 
+                "addressRegion": "CT",
                 "postalCode": "06611",
                 "addressCountry": "US"
               },
-
               "openingHoursSpecification": [
                 {
                   "@type": "OpeningHoursSpecification",
@@ -106,7 +105,7 @@ export default function RootLayout({
                   "closes": "17:00"
                 },
                 {
-                  "@type": "OpeningHoursSpecification", 
+                  "@type": "OpeningHoursSpecification",
                   "dayOfWeek": ["Wednesday", "Friday"],
                   "opens": "08:00",
                   "closes": "12:00"
