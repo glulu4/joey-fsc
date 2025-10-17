@@ -98,6 +98,7 @@ export default function HorizontalSlider() {
     const [itemWidth, setItemWidth] = useState<number>(400);
     const [itemHeight, setItemHeight] = useState<number>(550);
     const [isMobile, setIsMobile] = useState(false);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     useEffect(() => {
         if (typeof window === "undefined") return;
@@ -115,6 +116,21 @@ export default function HorizontalSlider() {
         window.addEventListener('resize', checkMobile);
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
+
+    useEffect(() => {
+        const container = containerRef.current;
+        if (!container || !isMobile) return;
+
+        const handleScroll = () => {
+            const scrollLeft = container.scrollLeft;
+            const cardWidth = itemWidth + 24; // itemWidth + gap
+            const index = Math.round(scrollLeft / cardWidth);
+            setActiveIndex(index);
+        };
+
+        container.addEventListener('scroll', handleScroll);
+        return () => container.removeEventListener('scroll', handleScroll);
+    }, [isMobile, itemWidth]);
 
     const handleScroll = (scrollAmount: number) => {
         if (containerRef.current) {
@@ -206,6 +222,32 @@ export default function HorizontalSlider() {
                     </a>
                 ))}
             </div>
+
+            {/* Scroll Indicator Dots - Mobile Only */}
+            {isMobile && (
+                <div className="flex items-center justify-center gap-2 mt-6 md:hidden">
+                    {services.map((_, idx) => (
+                        <button
+                            key={idx}
+                            onClick={() => {
+                                if (containerRef.current) {
+                                    const cardWidth = itemWidth + 24; // itemWidth + gap
+                                    containerRef.current.scrollTo({
+                                        left: idx * cardWidth,
+                                        behavior: 'smooth'
+                                    });
+                                }
+                            }}
+                            className={`transition-all duration-300 rounded-full ${
+                                idx === activeIndex
+                                    ? 'w-8 h-2 bg-primary-teal'
+                                    : 'w-2 h-2 bg-slate-300 hover:bg-slate-400'
+                            }`}
+                            aria-label={`Go to service ${idx + 1}`}
+                        />
+                    ))}
+                </div>
+            )}
 
             <style jsx>{`
                 .scrollbar-hide::-webkit-scrollbar {
