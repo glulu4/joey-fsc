@@ -8,6 +8,27 @@ import {serviceHrefMap} from "@/lib/service-href-map";
 
 export const services = [
     {
+        name: "Dental Implants",
+        img: "/images/services/implant/implants.webp",
+        slug: "dental-implants",
+        href: serviceHrefMap["dental-implants"],
+        description: "Dental implants are a permanent solution for missing teeth, offering natural-looking results and long-term stability.",
+    },
+    {
+        name: "Tooth Extractions",
+        img: "/images/services/tooth-extract/tooth-extract.webp",
+        slug: "extractions",
+        href: serviceHrefMap["tooth-extractions"],
+        description: "We perform gentle, precise tooth extractions when teeth are damaged, decayed, or causing crowding.",
+    },
+    {
+        name: "Wisdom Teeth",
+        img: "/images/services/wisdom/wisdom-tooth.webp",
+        slug: "wisdom-teeth-removal",
+        href: serviceHrefMap["wisdom-teeth-removal"],
+        description: "Wisdom tooth removal prevents crowding, pain, and infections by safely extracting third molars.",
+    },
+    {
         name: "Anesthesia",
         img: "/images/services/anesthesia/anesthesia.webp",
         slug: "anesthesia",
@@ -43,13 +64,6 @@ export const services = [
         description: "Genioplasty enhances the chin's shape and projection to create facial balance and improve appearance or function.",
     },
     {
-        name: "Dental Implants",
-        img: "/images/services/implant/implants.webp",
-        slug: "dental-implants",
-        href: serviceHrefMap["dental-implants"],
-        description: "Dental implants are a permanent solution for missing teeth, offering natural-looking results and long-term stability.",
-    },
-    {
         name: "Oral Pathology",
         img: "/images/services/oral-pathology/oral-pathology.webp",
         slug: "oral-pathology",
@@ -76,20 +90,6 @@ export const services = [
         slug: "tmj-disorder",
         href: serviceHrefMap["tmj-disorder"],
         description: "TMJ treatment relieves jaw pain, stiffness, and clicking caused by temporomandibular joint disorders.",
-    },
-    {
-        name: "Tooth Extractions",
-        img: "/images/services/tooth-extract/tooth-extract.webp",
-        slug: "extractions",
-        href: serviceHrefMap["tooth-extractions"],
-        description: "We perform gentle, precise tooth extractions when teeth are damaged, decayed, or causing crowding.",
-    },
-    {
-        name: "Wisdom Teeth",
-        img: "/images/services/wisdom/wisdom-tooth.webp",
-        slug: "wisdom-teeth-removal",
-        href: serviceHrefMap["wisdom-teeth-removal"],
-        description: "Wisdom tooth removal prevents crowding, pain, and infections by safely extracting third molars.",
     },
 ];
 
@@ -133,7 +133,7 @@ export default function HorizontalSlider() {
                         Comprehensive care for all your oral and facial needs
                     </BodyText>
                 </div>
-                <div className="items-center gap-3 hidden sm:flex">
+                <div className="items-center gap-3 hidden sm:flex md:hidden">
                     <button
                         onClick={() => handleScroll(-itemWidth)}
                         className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary-teal hover:bg-primaryCyan flex items-center justify-center shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105"
@@ -151,7 +151,7 @@ export default function HorizontalSlider() {
 
             <div
                 ref={containerRef}
-                className="w-full overflow-x-auto scroll-smooth snap-x snap-mandatory flex gap-6 py-6 scrollbar-hide"
+                className="w-full overflow-x-auto scroll-smooth snap-x snap-mandatory flex gap-6 py-6 scrollbar-hide md:overflow-visible md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:max-w-7xl"
                 style={{
                     scrollbarWidth: 'none',
                     msOverflowStyle: 'none',
@@ -161,11 +161,11 @@ export default function HorizontalSlider() {
                     <a
                         href={item.href}
                         key={idx}
-                        className="group bg-white snap-center shrink-0 rounded-3xl shadow-lg transition-all duration-300 flex flex-col overflow-hidden border border-slate-100 hover:border-primary-teal hover:-translate-y-2 hover:scale-[1.02]"
-                        style={{
+                        className="group bg-white snap-center shrink-0 rounded-3xl shadow-lg transition-all duration-300 flex flex-col overflow-hidden border border-slate-100 hover:border-primary-teal hover:-translate-y-2 hover:scale-[1.02] md:shrink md:w-auto"
+                        style={isMobile ? {
                             width: `${itemWidth}px`,
                             height: `${itemHeight}px`,
-                        }}
+                        } : undefined}
                     >
                         {/* Image Section */}
                         <div className="relative h-64 overflow-hidden bg-bg">
